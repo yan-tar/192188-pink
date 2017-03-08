@@ -5,8 +5,83 @@
     <title>HTML Academy: Пинк</title>
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">Продвинутый HTML и CSS</a>».</p>
-
+    <header class="page-header">
+      <h1 class="page-header__title"></h1>
+      <nav class="page-header__nav"></nav>
+    </header>
+    <section class="download">
+      <button class="download__btn  btn">Скачать приложение</button>
+      <ul class="download__os-list">
+        <li class="download__os-item"><a href="page.html"></a></li>
+        <li class="download__os-item"><a href="page.html"></a></li>
+        <li class="download__os-item"><a href="page.html"></a></li>
+      </ul>
+      <p class="download__txt">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+    </section>
+    <section class="desc">
+      <div class="desc__slogans">
+        <p class="desc__slogan">Устали от серости мегаполиса?</p>
+        <p class="desc__slogan">Нам есть, что вам предложить!</p>
+      </div>
+      <div class="desc__offers">
+        <div class="desc__offer">
+          <h2 class="desc__offer-title">Поднимает настроение</h2>
+          <p class="desc__offer-txt">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+        </div>
+        <div class="desc__offer">
+          <h2 class="desc__offer-title">Меняет мир вокруг</h2>
+          <p class="desc__offer-txt">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+        </div>
+        <div class="desc__offer">
+          <h2 class="desc__offer-title">Заводит новых друзей</h2>
+          <p class="desc__offer-txt">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями, заводите новых</p>
+        </div>
+      </div>
+    </section>
+    <section class="feedback  slider">
+      <blockquote class="feedback__inner  slider__item">
+        <h3 class="feedback__autor">Николай Петров</h3>
+        <p class="feedback__txt">&laquo; Это приложение перевернуло мой мир и позволило по-новому взглянуть на серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;</p>
+      </blockquote>
+      <ul class="slider__switchers">
+        <li class="slider__switcher  slider__switcher--active"></li>
+        <li class="slider__switcher"></li>
+        <li class="slider__switcher"></li>
+      </ul>
+    </section>
+    <section class="tariffs  slider">
+      <div class="tariffs__inner slider__item">
+        <header class="tariffs__header">
+          <h2 class="tariffs__title">Стандарт</h2>
+          <div class="tariffs__price">3,99 USD</div>
+        </header>
+        <ul class="tariffs__list">
+          <li class="tariffs__item  tariffs__item--yes">Розовый фильтр</li>
+          <li class="tariffs__item  tariffs__item--yes">Смайлики</li>
+          <li class="tariffs__item  tariffs__item--no">Комментарии</li>
+        </ul>
+      </div>
+      <ul class="slider__switchers">
+        <li class="slider__switcher"></li>
+        <li class="slider__switcher  slider__switcher--active"></li>
+        <li class="slider__switcher"></li>
+      </ul>
+    </section>
+    <section class="contacts">
+      <header class="contacts__header">
+        <h2 class="contacts__title visualy-hidden">Контакты</h2>
+        <p class="contacts__subtitle">Остались вопросы? Свяжитесь с нами!</p>
+      </header>
+      <div class="contacts__item--phone">
+        Звоните: <div class="contacts__detail"><a href="tel:+78125556666">+7(812)555-66-66</a></div>
+      </div>
+      <div class="contacts__item--mail">
+        Пишите: <div class="contacts__detail"><a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></div>
+      </div>
+      <div class="contacts__item--addres">
+        Приезжайте в гости: <div class="contacts__detail">ул. Большая Конюшенная, 19/8</div>
+      </div>
+      <div class="contacts__map"></div>
+    </section>
   </body>
 </html>
