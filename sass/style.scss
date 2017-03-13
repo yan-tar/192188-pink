@@ -1,5 +1,16 @@
 @import "variables";
+@import "mixins";
+@import "scaffolding";
+
+@import "blocks/slider";
+@import "blocks/social";
 
 @import "blocks/page-header";
 @import "blocks/download";
 @import "blocks/desc";
+@import "blocks/feedback";
+@import "blocks/tariffs";
+@import "blocks/contacts";
+@import "blocks/photocontent";
+@import "blocks/editpic";
+@import "blocks/page-footer";

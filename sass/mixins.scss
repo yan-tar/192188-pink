@@ -1,0 +1,37 @@
+@mixin clearfix() {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+/*стили для всех обычных ссылок*/
+@mixin link(){
+  color:$link-color;
+  text-decoration:none;
+  &:hover {
+    color:$hover-color;
+  }
+  &:active{
+    color:$down-color;
+  }
+}
+
+@mixin fademe($link-color,$op){
+  color: rgba($link-color, $op);
+}
+
+
+@mixin container() {
+  width:280px;
+  margin:0 auto;
+
+  @media (#{$tablet-width}){
+    width:768px;
+  }
+
+  @media (#{$desktop-width}){
+    width:1050px;
+  }
+}

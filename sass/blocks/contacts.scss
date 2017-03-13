@@ -1,0 +1,38 @@
+.contacts__inner {
+  width:280px;
+  margin:0 auto;
+  text-align: center;
+
+  @include opensans;
+}
+
+.contacts__subtitle {
+  color: #283645;
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.contacts__item {
+  color: #283645;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.contacts__detail {
+  color: #d22856;
+  font-size: 24px;
+  font-weight: 300;
+  text-decoration: none;
+}
+
+.contacts__detail a {
+  color: #d22856;
+  font-size: 24px;
+  font-weight: 300;
+  text-decoration: none;
+}
+
+.contacts__map {
+  width:320px;
+  margin:0 auto;
+}

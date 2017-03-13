@@ -7,16 +7,22 @@
   </head>
   <body class="main_page">
     <header class="page-header">
-      <h1 class="page-header__title  visualy-hidden">Pink</h1>
-      <div class="page-header__logo"><img src="img/logo-pink-white-mobile.svg" alt="PINK" title="PINK Logo"></div>
-      <nav class="page-header__nav">
+      <div class="page-header__top">
+        <h1 class="page-header__title  visually-hidden">Pink</h1>
+        <div class="page-header__logo"><img src="img/logo-pink-white-mobile.svg" alt="PINK" title="PINK Logo"></div>
+        <div class="page-header__toggle"></div>
+      </div>
+      <nav class="page-header__nav  page-header__nav">
         <ul class="page-header__nav-list">
-          <li class="page-header__nav-item"><a href="page.html">Главная</a></li>
-          <li class="page-header__nav-item"><a href="page.html">Фотографии</a></li>
-          <li class="page-header__nav-item"><a href="page.html">Конкурс</a></li>
-          <li class="page-header__nav-item"><a href="page.html">HTML Academy</a></li>
+          <li class="page-header__nav-item"><a>Главная</a></li>
+          <li class="page-header__nav-item"><a href="photo.html">Фотографии</a></li>
+          <li class="page-header__nav-item"><a href="form.html">Конкурс</a></li>
+          <li class="page-header__nav-item"><a href="http://htmlacademy.ru">HTML Academy</a></li>
         </ul>
       </nav>
+      <div class="page-header__pic">
+        <img src="../img/iphone-hand-mobile@1x.png" width="258" height="286">
+      </div>
     </header>
     <section class="download">
       <div class="download__inner">
@@ -51,8 +57,8 @@
     </section>
     <section class="feedback  slider">
       <blockquote class="feedback__inner  slider__item">
-        <h3 class="feedback__autor">Николай Петров</h3>
-        <p class="feedback__txt">&laquo; Это приложение перевернуло мой мир и позволило по-новому взглянуть на серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;</p>
+        <h3 class="feedback__author">Николай Петров</h3>
+        <p class="feedback__txt">&laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;</p>
       </blockquote>
       <ul class="slider__switchers">
         <li class="slider__switcher  slider__switcher--active"></li>
@@ -61,16 +67,40 @@
       </ul>
     </section>
     <section class="tariffs  slider">
-      <div class="tariffs__inner slider__item">
-        <header class="tariffs__header">
-          <h2 class="tariffs__title">Стандарт</h2>
-          <div class="tariffs__price">3,99 USD</div>
-        </header>
-        <ul class="tariffs__list">
-          <li class="tariffs__item  tariffs__item--yes">Розовый фильтр</li>
-          <li class="tariffs__item  tariffs__item--yes">Смайлики</li>
-          <li class="tariffs__item  tariffs__item--no">Комментарии</li>
-        </ul>
+      <div class="tariffs__wrapper">
+        <div class="tariffs__inner  slider__item">
+          <header class="tariffs__header">
+            <h2 class="tariffs__title">Стандарт</h2>
+            <div class="tariffs__price">3,99 USD</div>
+          </header>
+          <ul class="tariffs__list">
+            <li class="tariffs__item  tariffs__item--yes">Розовый фильтр</li>
+            <li class="tariffs__item  tariffs__item--yes">Смайлики</li>
+            <li class="tariffs__item  tariffs__item--no">Комментарии</li>
+          </ul>
+        </div>
+        <div class="tariffs__inner  slider__item  slider__item--active">
+          <header class="tariffs__header  tariffs__header--hit">
+            <h2 class="tariffs__title">Стандарт</h2>
+            <div class="tariffs__price">3,99 USD</div>
+          </header>
+          <ul class="tariffs__list">
+            <li class="tariffs__item  tariffs__item--yes">Розовый фильтр</li>
+            <li class="tariffs__item  tariffs__item--yes">Смайлики</li>
+            <li class="tariffs__item  tariffs__item--no">Комментарии</li>
+          </ul>
+        </div>
+        <div class="tariffs__inner  slider__item">
+          <header class="tariffs__header">
+            <h2 class="tariffs__title">Стандарт</h2>
+            <div class="tariffs__price">3,99 USD</div>
+          </header>
+          <ul class="tariffs__list">
+            <li class="tariffs__item  tariffs__item--yes">Розовый фильтр</li>
+            <li class="tariffs__item  tariffs__item--yes">Смайлики</li>
+            <li class="tariffs__item  tariffs__item--no">Комментарии</li>
+          </ul>
+        </div>
       </div>
       <ul class="slider__switchers">
         <li class="slider__switcher"></li>
@@ -79,20 +109,22 @@
       </ul>
     </section>
     <section class="contacts">
-      <header class="contacts__header">
-        <h2 class="contacts__title visualy-hidden">Контакты</h2>
-        <p class="contacts__subtitle">Остались вопросы? Свяжитесь с нами!</p>
-      </header>
-      <div class="contacts__item--phone">
-        Звоните: <div class="contacts__detail"><a href="tel:+78125556666">+7(812)555-66-66</a></div>
+      <div class="contacts__inner">
+        <header class="contacts__header">
+          <h2 class="contacts__title visually-hidden">Контакты</h2>
+          <p class="contacts__subtitle">Остались вопросы? Свяжитесь с нами!</p>
+        </header>
+        <div class="contacts__item  contacts__item--phone">
+          Звоните: <div class="contacts__detail"><a href="tel:+78125556666">+7(812)555-66-66</a></div>
+        </div>
+        <div class="contacts__item  contacts__item--mail">
+          Пишите: <div class="contacts__detail"><a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></div>
+        </div>
+        <div class="contacts__item  contacts__item--addres">
+          Приезжайте в гости: <div class="contacts__detail">ул. Большая Конюшенная, 19/8</div>
+        </div>
       </div>
-      <div class="contacts__item--mail">
-        Пишите: <div class="contacts__detail"><a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></div>
-      </div>
-      <div class="contacts__item--addres">
-        Приезжайте в гости: <div class="contacts__detail">ул. Большая Конюшенная, 19/8</div>
-      </div>
-      <div class="contacts__map"></div>
+      <div class="contacts__map"><img src="/img/bg-map-mobile%401x.png"></div>
     </section>
   </body>
 </html>

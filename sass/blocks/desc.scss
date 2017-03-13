@@ -16,8 +16,24 @@
 }
 
 .desc__offers {
-  background-color: #f2f2f2;
+  background: url("/img/iphone-screen-mobile@1x.png") no-repeat 50% 375px;
+  background-color: $midlight;
+  padding-top: 30px;
+  padding-bottom:320px;
+  position: relative;
+
+  &::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    height: 32px;
+    background-image: linear-gradient(to top left, #f2f2f2 50%, #ffffff 50%);
+  }
 }
+
 .desc__offer {
   width:280px;
   margin:0 auto;

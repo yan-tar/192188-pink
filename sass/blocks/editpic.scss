@@ -1,0 +1,60 @@
+.editpic {
+  background-color: $midlight;
+  padding: 20px;
+  margin: 0 auto;
+  width: 280px;
+}
+
+.editpic__tools-item{
+  width: 44px;
+  height: 44px;
+  display: inline-block;
+  list-style-type:none;
+
+  &--crop::after {
+    background: url("../img/icon-editor-crop.svg") no-repeat 0 0;
+  }
+
+  &--color {
+    background: url("../img/icon-editor-fill.svg") no-repeat 0 0;
+  }
+
+  &--contrast {
+    background: url("../img/icon-editor-contrast.svg") no-repeat 0 0;
+  }
+}
+
+.editpic__range {
+  width: 250px;
+  height: 10px;
+  margin: 0 auto 40px;
+  border-bottom:2px solid black;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    top: 4px; left: 180px;
+    content: "";
+    border: 2px solid $accent;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: $midlight;
+  }
+}
+
+.editpic__btns {
+  border-top:1px solid #dddfe0;
+  padding-top: 26px;
+  padding-bottom:29px;
+}
+
+.editpic__btn {
+  border-color: $accent;
+  color: $accent;
+}
+
+.editpic__btn--faden {
+  border-color: #dddfe0;
+  color: #dddfe0;
+}
