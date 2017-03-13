@@ -1,0 +1,28 @@
+.page-header {
+  background-color: $middark;
+  color:#fff;
+}
+
+.page-header__nav-list {
+  list-style-type: none;
+  margin:0;
+  padding:0;
+  text-align:center;
+}
+
+.page-header__nav-item {
+  list-style-type: none;
+  color: white;
+  font-family: "Open Sans";
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 63px;
+  text-transform: uppercase;
+  height: 63px;
+  box-shadow: 0 1px 0 black, inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.page-header__nav-item a {
+  color: white;
+  text-decoration: none;
+}

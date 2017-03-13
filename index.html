@@ -3,24 +3,35 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="main_page">
     <header class="page-header">
-      <h1 class="page-header__title">Pink</h1>
-      <nav class="page-header__nav"></nav>
+      <h1 class="page-header__title  visualy-hidden">Pink</h1>
+      <div class="page-header__logo"><img src="img/logo-pink-white-mobile.svg" alt="PINK" title="PINK Logo"></div>
+      <nav class="page-header__nav">
+        <ul class="page-header__nav-list">
+          <li class="page-header__nav-item"><a href="page.html">Главная</a></li>
+          <li class="page-header__nav-item"><a href="page.html">Фотографии</a></li>
+          <li class="page-header__nav-item"><a href="page.html">Конкурс</a></li>
+          <li class="page-header__nav-item"><a href="page.html">HTML Academy</a></li>
+        </ul>
+      </nav>
     </header>
     <section class="download">
-      <button class="download__btn  btn">Скачать приложение</button>
-      <ul class="download__os-list">
-        <li class="download__os-item"><a href="page.html"></a></li>
-        <li class="download__os-item"><a href="page.html"></a></li>
-        <li class="download__os-item"><a href="page.html"></a></li>
-      </ul>
-      <p class="download__txt">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+      <div class="download__inner">
+        <div class="download__btn  btn">Скачать приложение</div>
+        <ul class="download__os-list">
+          <li class="download__os-item"><a href="page.html"></a></li>
+          <li class="download__os-item"><a href="page.html"></a></li>
+          <li class="download__os-item"><a href="page.html"></a></li>
+        </ul>
+        <p class="download__txt">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+      </div>
     </section>
     <section class="desc">
       <div class="desc__slogans">
-        <p class="desc__slogan">Устали от серости мегаполиса?</p>
+        <p class="desc__slogan">Устали от серости <br />мегаполиса?</p>
         <p class="desc__slogan">Нам есть, что вам предложить!</p>
       </div>
       <div class="desc__offers">

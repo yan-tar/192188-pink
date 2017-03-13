@@ -1,0 +1,42 @@
+.download {
+  background: url(/img/bg-back-mobile%401x.jpg) no-repeat 50% 0;
+  background-color: $middark;
+  color:#fff;
+  padding-top:395px;
+}
+.download__inner {
+  background-color: $dark;
+  width:280px;
+  padding:28px 0 28px;
+  margin:0 auto;
+}
+
+.download__btn {
+  margin:0 auto;
+  width: 274px;
+  height: 55px;
+  border: 3px solid white;
+  border-radius: 50px;
+  color: white;
+  font-family: "Open Sans";
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 55px;
+  text-align:center;
+}
+
+.download__os-list {
+  margin:0;
+}
+
+.download__os-item {
+  list-style-type:none;
+}
+
+.download__txt {
+  text-align: center;
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px;
+}
