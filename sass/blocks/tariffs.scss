@@ -1,0 +1,68 @@
+.tariffs {
+  min-width:320px;
+  height:450px;
+  background-color: $midlight;
+  position:relative;
+}
+
+.tariffs__wrapper {
+  width:850px;
+  height:280px;
+  position:absolute;
+  left:0%; right:0%; top:50px;
+  background-color: $midlight;
+}
+
+.tariffs__inner{
+  width:278px;
+  height:280px;
+  display:inline-block;
+}
+
+.tariffs__header{
+  width:280px;
+  height:88px;
+  padding-top:10px;
+  background-color: $middark;
+  color:#fff;
+  text-align:center;
+
+  &--hit{
+    background:$middark url(../img/bg-hit.svg) no-repeat 0 0;
+  }
+}
+
+.tariffs__title {
+  @include opensans;
+  font-size: 18px;
+  font-weight: 700;
+  line-height:20px;
+  text-transform: uppercase;
+}
+
+.tariffs__price {
+  @include opensans;
+  font-size: 24px;
+  font-weight: 300;
+  line-height:24px;
+  text-transform: uppercase;
+}
+
+.tariffs__list {
+  margin:0;
+  padding:0;
+}
+
+.tariffs__item {
+  margin:1px 0;
+  padding: 15px;
+  background-color: #fff;
+  color: #283645;
+
+  @include opensans;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 30px;
+  text-transform: uppercase;
+  list-style-type: none;
+}

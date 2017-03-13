@@ -1,0 +1,90 @@
+.photocontent {
+  width:320px;
+  margin:0 auto;
+}
+
+.photocontent__desc{
+  width: 280px;
+  padding-bottom: 20px;
+  margin: 0 auto;
+  color: #283645;
+  background-color: #f2f2f2;
+  position:relative;
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+.photocontent__item {
+  width:280px;
+  margin: 0 auto 20px;
+  line-height:1px;
+}
+
+.photocontent__item--panorama {
+  width:320px;
+  position:relative;
+}
+
+.photocontent__item--panorama::after {
+  position:absolute;
+  display:block;
+  top:0; right: 20px;
+  width:140px;
+  height:30px;
+  padding-top:5px;
+  content:"панорама дня";
+  background-color: #d22856;
+  color:#fff;
+  z-index:10;
+  text-align:center;
+  font-size:12px;
+  font-weight: 700;
+  line-height:24px;
+  text-transform: uppercase;
+}
+
+.photocontent__item img {
+  margin:0; padding:0;
+}
+
+.photocontent__header {
+  margin-top: 0;
+  padding-top:0;
+  padding-left: 17px;
+  padding-right: 20px;
+}
+
+.photocontent__author {
+  margin-top: 0;
+}
+
+.photocontent__time {
+  font-size: 12px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.photocontent__txt {
+  padding-left: 17px;
+  padding-right: 20px;
+}
+
+.photocontent__likes {
+  padding-left: 49px;
+  color: #d22856;
+  background: url(../img/icon-heart.svg) no-repeat 17px 5px;
+
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+
+.photocontent__slogan {
+  padding: 0 20px;
+  margin: 0 auto;
+  text-align: center;
+}

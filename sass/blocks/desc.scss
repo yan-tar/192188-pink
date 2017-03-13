@@ -1,0 +1,55 @@
+.desc {
+  background-color:#fff;
+}
+
+.desc__slogans {
+  width:250px;
+  margin:0 auto;
+  text-align: center;
+}
+
+.desc__slogan{
+  color: #283645;
+  font-family: "Open Sans";
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.desc__offers {
+  background: url("/img/iphone-screen-mobile@1x.png") no-repeat 50% 375px;
+  background-color: $midlight;
+  padding-top: 30px;
+  padding-bottom:320px;
+  position: relative;
+
+  &::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    height: 32px;
+    background-image: linear-gradient(to top left, #f2f2f2 50%, #ffffff 50%);
+  }
+}
+
+.desc__offer {
+  width:280px;
+  margin:0 auto;
+  text-align:center;
+}
+
+.desc__offer-title{
+  font-family: "Open Sans";
+  font-size:18px;
+  font-weight:700;
+  line-height: 24px;
+}
+
+.desc__offer-txt {
+  font-family: "Open Sans";
+  color: #283645;
+  font-size: 14px;
+  font-weight: 400;
+}

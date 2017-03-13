@@ -1,0 +1,9 @@
+body {
+  min-width:320px;
+  margin:0;
+  padding:0;
+  @include opensans;
+  font-size: 14px;
+  font-weight:normal;
+  line-height: 30px;
+}
