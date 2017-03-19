@@ -1,24 +1,80 @@
-.feedback {background-color: #fff;}
+.feedback {
+  padding-top: 44px;
+  padding-bottom: 40px;
+  background-color: #fff;
+  color: black;
+  @media (#{$tablet}){
+    padding-bottom: 20px;
+  }
+}
 
 .feedback__inner{
-  width:280px;
+  @include container;
   margin:0 auto;
   text-align:center;
+
+  @media (#{$tablet}){
+    display: flex;
+    flex-direction: column;
+    padding-top: 25px;
+  }
+
+  @media (#{$desktop}) {
+    padding-top: 125px;
+    padding-bottom: 30px;
+  }
 }
 
 .feedback__author {
-  color: black;
-  font-family: "Open Sans";
+  display: block;
+  margin: 0;
+  @inclide @opensans(700);
   font-size: 18px;
-  font-weight: 700;
   line-height: 30px;
+
+  @media (#{$tablet}) {
+    order: 2;
+    font-size: 20px;
+    margin-top: 18px;
+  }
+  @media (#{$desktop}) {
+    font-size: 24px;
+  }
+}
+
+.feedback__author-desc {
+  display:none;
+
+  @media (#{$tablet}) {
+    display: block;
+    order: 3;
+    font-size: 14px;
+    line-height: 30px;
+  }
+  @media (#{$desktop}) {
+    font-size: 18px;
+  }
 }
 
 .feedback__txt {
   color: #283645;
-  font-family: "Open Sans";
+  @inclide @opensans(400);
   font-size: 14px;
-  font-weight: 400;
   line-height: 30px;
   text-align:center;
+
+  @media (#{$tablet}) {
+    font-size: 18px;
+  }
+  @media (#{$desktop}) {
+    width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.feedback__switchers {
+  @media (#{$desktop}) {
+    display: none;
+  }
 }

@@ -6,103 +6,116 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="main_page">
-    <header class="page-header">
-      <div class="page-header__top">
-        <h1 class="page-header__title  visually-hidden">Pink</h1>
-        <div class="page-header__logo"><img src="img/logo-pink-white-mobile.svg" alt="PINK" title="PINK Logo"></div>
-        <div class="page-header__toggle"></div>
+    <header class="page-header  page-header--opened">
+      <div class="page-header__inner">
+        <div class="page-header__top">
+          <h1 class="page-header__title  visually-hidden">Pink</h1>
+          <div class="page-header__logo"><img src="img/logo-pink-white-mobile.svg" alt="PINK" title="PINK Logo"></div>
+          <div class="page-header__toggle"></div>
+        </div>
+        <nav class="page-header__nav">
+          <ul class="page-header__nav-list">
+            <li class="page-header__nav-item"><a>Главная</a></li>
+            <li class="page-header__nav-item"><a href="photo.html">Фотографии</a></li>
+            <li class="page-header__nav-item"><a href="form.html">Конкурс</a></li>
+            <li class="page-header__nav-item"><a href="http://htmlacademy.ru">HTML Academy</a></li>
+          </ul>
+        </nav>
       </div>
-      <nav class="page-header__nav  page-header__nav">
-        <ul class="page-header__nav-list">
-          <li class="page-header__nav-item"><a>Главная</a></li>
-          <li class="page-header__nav-item"><a href="photo.html">Фотографии</a></li>
-          <li class="page-header__nav-item"><a href="form.html">Конкурс</a></li>
-          <li class="page-header__nav-item"><a href="http://htmlacademy.ru">HTML Academy</a></li>
-        </ul>
-      </nav>
-      <div class="page-header__pic">
-        <img src="../img/iphone-hand-mobile@1x.png" width="258" height="286">
-      </div>
-    </header>
-    <section class="download">
-      <div class="download__inner">
+      <div class="download">
+        <p class="download__slogan">Взгляните на&nbsp;жизнь<br />иначе!</p>
         <div class="download__btn  btn">Скачать приложение</div>
         <ul class="download__os-list">
-          <li class="download__os-item"><a href="page.html"></a></li>
-          <li class="download__os-item"><a href="page.html"></a></li>
-          <li class="download__os-item"><a href="page.html"></a></li>
+          <li class="download__os-item"><a href="page.html"><img src="img/logo-apple.svg"></a></li>
+          <li class="download__os-item"><a href="page.html"><img src="img/logo-android.svg"></a></li>
+          <li class="download__os-item"><a href="page.html"><img src="img/logo-microsoft.svg"></a></li>
         </ul>
         <p class="download__txt">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
       </div>
-    </section>
+    </header>
     <section class="desc">
       <div class="desc__slogans">
-        <p class="desc__slogan">Устали от серости <br />мегаполиса?</p>
-        <p class="desc__slogan">Нам есть, что вам предложить!</p>
+        <p class="desc__slogan  desc__slogan--wide">Устали от серости <br />мегаполиса?</p>
+        <p class="desc__slogan">Нам есть, что вам <br />предложить!</p>
       </div>
       <div class="desc__offers">
-        <div class="desc__offer">
-          <h2 class="desc__offer-title">Поднимает настроение</h2>
-          <p class="desc__offer-txt">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+        <div class="desc__offers-inner">
+          <div class="desc__offer">
+            <h3 class="desc__offer-title">Поднимает настроение</h3>
+            <p class="desc__offer-txt">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+          </div>
+          <div class="desc__offer">
+            <h3 class="desc__offer-title">Меняет мир вокруг</h3>
+            <p class="desc__offer-txt">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+          </div>
+          <div class="desc__offer">
+            <h3 class="desc__offer-title">Заводит новых друзей</h3>
+            <p class="desc__offer-txt">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями, заводите новых</p>
+          </div>
         </div>
-        <div class="desc__offer">
-          <h2 class="desc__offer-title">Меняет мир вокруг</h2>
-          <p class="desc__offer-txt">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-        </div>
-        <div class="desc__offer">
-          <h2 class="desc__offer-title">Заводит новых друзей</h2>
-          <p class="desc__offer-txt">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями, заводите новых</p>
-        </div>
+      </div>
+    </section>
+    <section class="effect">
+      <div class="effect__inner">
+        <header class="effect__header">
+          <h3 class="effect__title">Эффект на&nbsp;24&nbsp;часа!</h3>
+        </header>
+        <p class="effect__txt">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+        <p class="effect__txt"><a href="page.html">Узнать больше об исследовании</a></p>
       </div>
     </section>
     <section class="feedback  slider">
       <blockquote class="feedback__inner  slider__item">
-        <h3 class="feedback__author">Николай Петров</h3>
-        <p class="feedback__txt">&laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;</p>
+        <b class="feedback__author">Николай Петров</b>
+        <div class="feedback__author-desc">25 лет, водитель трамвая</div>
+        <p class="feedback__txt">&laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;</p>
       </blockquote>
-      <ul class="slider__switchers">
+      <ul class="feedback__switchers  slider__switchers">
         <li class="slider__switcher  slider__switcher--active"></li>
         <li class="slider__switcher"></li>
         <li class="slider__switcher"></li>
       </ul>
     </section>
     <section class="tariffs  slider">
-      <div class="tariffs__wrapper">
-        <div class="tariffs__inner  slider__item">
-          <header class="tariffs__header">
-            <h2 class="tariffs__title">Стандарт</h2>
-            <div class="tariffs__price">3,99 USD</div>
-          </header>
-          <ul class="tariffs__list">
-            <li class="tariffs__item  tariffs__item--yes">Розовый фильтр</li>
-            <li class="tariffs__item  tariffs__item--yes">Смайлики</li>
-            <li class="tariffs__item  tariffs__item--no">Комментарии</li>
-          </ul>
-        </div>
-        <div class="tariffs__inner  slider__item  slider__item--active">
-          <header class="tariffs__header  tariffs__header--hit">
-            <h2 class="tariffs__title">Стандарт</h2>
-            <div class="tariffs__price">3,99 USD</div>
-          </header>
-          <ul class="tariffs__list">
-            <li class="tariffs__item  tariffs__item--yes">Розовый фильтр</li>
-            <li class="tariffs__item  tariffs__item--yes">Смайлики</li>
-            <li class="tariffs__item  tariffs__item--no">Комментарии</li>
-          </ul>
-        </div>
-        <div class="tariffs__inner  slider__item">
-          <header class="tariffs__header">
-            <h2 class="tariffs__title">Стандарт</h2>
-            <div class="tariffs__price">3,99 USD</div>
-          </header>
-          <ul class="tariffs__list">
-            <li class="tariffs__item  tariffs__item--yes">Розовый фильтр</li>
-            <li class="tariffs__item  tariffs__item--yes">Смайлики</li>
-            <li class="tariffs__item  tariffs__item--no">Комментарии</li>
-          </ul>
-        </div>
-      </div>
-      <ul class="slider__switchers">
+      <table class="tariffs__table">
+        <thead>
+          <tr>
+            <td class="tariffs__cell  tariffs__cell--first tariffs__cell--empty"></td>
+            <th class="tariffs__header">
+              <h4 class="tariffs__title">База</h4>
+              <span class="tariffs__price">1,99 USD</span>
+            </th>
+            <th class="tariffs__header tariffs__header--hit">
+              <h4 class="tariffs__title">Стандарт</h4>
+              <span class="tariffs__price">3,99 USD</span>
+            </th>
+            <th class="tariffs__header">
+              <h4 class="tariffs__title">Анлим</h4>
+              <span class="tariffs__price">9,99 USD</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="tariffs__first-str">
+            <td class="tariffs__cell  tariffs__cell--first">Розовый фильтр</td>
+            <td class="tariffs__cell  tariffs__cell--yes">Розовый фильтр</td>
+            <td class="tariffs__cell  tariffs__cell--yes">Розовый фильтр</td>
+            <td class="tariffs__cell  tariffs__cell--yes">Розовый фильтр</td>
+          </tr>
+          <tr>
+            <td class="tariffs__cell  tariffs__cell--first">Смайлики</td>
+            <td class="tariffs__cell  tariffs__cell--no">Смайлики</td>
+            <td class="tariffs__cell  tariffs__cell--yes">Смайлики</td>
+            <td class="tariffs__cell  tariffs__cell--yes">Смайлики</td>
+          </tr>
+          <tr>
+            <td class="tariffs__cell  tariffs__cell--first">Комментарии</td>
+            <td class="tariffs__cell  tariffs__cell--no">Комментарии</td>
+            <td class="tariffs__cell  tariffs__cell--no">Комментарии</td>
+            <td class="tariffs__cell  tariffs__cell--yes">Комментарии</td>
+          </tr>
+        </tbody>
+      </table>
+      <ul class="tariffs__switchers  slider__switchers">
         <li class="slider__switcher"></li>
         <li class="slider__switcher  slider__switcher--active"></li>
         <li class="slider__switcher"></li>
@@ -126,5 +139,22 @@
       </div>
       <div class="contacts__map"><img src="/img/bg-map-mobile%401x.png"></div>
     </section>
+
+  <script>
+    var pageHeader = document.querySelector('.page-header');
+    var navToggle = document.querySelector('.page-header__toggle');
+
+    pageHeader.classList.remove('page-header--nojs');
+
+    navToggle.addEventListener('click', function() {
+      if (pageHeader.classList.contains('page-header--closed')) {
+        pageHeader.classList.remove('page-header--closed');
+        pageHeader.classList.add('page-header--opened');
+      } else {
+        pageHeader.classList.add('page-header--closed');
+        pageHeader.classList.remove('page-header--opened');
+      }
+    });
+  </script>
   </body>
 </html>

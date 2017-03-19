@@ -1,0 +1,61 @@
+.effect {
+  display:none;
+
+  @media (#{$tablet}){
+    display: block;
+    background-color: #fff;
+  }
+
+  @media (#{$desktop}) {
+    background-color: $midlight;
+  }
+}
+
+.effect__inner {
+  @include container;
+  padding: 98px 40px 20px;
+
+  @media (#{$desktop}) {
+    padding-top: 150px;
+    padding-bottom: 100px;
+  }
+}
+
+.effect__header {
+  width: 170px;
+  padding-left: 310px;
+
+  @media (#{$desktop}) {
+    width: 570px;
+    padding-left: 370px;
+  }
+}
+
+.effect__title {
+  @include opensans (700);
+  font-size: 30px;
+  line-height: 36px;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  @media (#{$desktop}) {
+    line-height: 30px;
+  }
+}
+
+.effect__txt {
+  padding-left: 310px;
+  margin-top: 10px;
+  line-height: 24px;
+
+  @media (#{$desktop}) {
+    font-size: 18px;
+    line-height: 30px;
+    padding-left: 370px;
+    margin-top: 25px;
+  }
+}
+
+.effect__txt a {
+  color: #d22856;
+}

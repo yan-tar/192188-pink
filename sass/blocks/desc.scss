@@ -1,25 +1,56 @@
 .desc {
   background-color:#fff;
+  padding-top: 1px;
+  @media (#{$tablet}){
+   padding-top: 27px;
+  }
 }
 
 .desc__slogans {
   width:250px;
-  margin:0 auto;
+  margin:40px auto 36px;
   text-align: center;
+
+  @media (#{$tablet}){
+    width: 600px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin: 22px auto 44px;
+  }
+
+  @media (#{$desktop}) {
+    width: 800px;
+    margin-top: 41px;
+  }
 }
 
 .desc__slogan{
+  @include h2;
   color: #283645;
-  font-family: "Open Sans";
-  font-size: 24px;
-  font-weight: 300;
+  margin-top: 30px;
+
+  @media (#{$tablet}){
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 48px;
+  }
+  @media (#{$desktop}) {
+    line-height: 60px;
+  }
+}
+
+.desc__slogan--wide br {
+  @media (#{$tablet}){
+    display:none;
+  }
 }
 
 .desc__offers {
-  background: url("/img/iphone-screen-mobile@1x.png") no-repeat 50% 375px;
+  background: url("/img/iphone-screen-mobile@1x.png")
+    no-repeat 50% 110%;
   background-color: $midlight;
-  padding-top: 30px;
-  padding-bottom:320px;
+  padding-top: 49px;
+  padding-bottom:304px;
   position: relative;
 
   &::before{
@@ -31,25 +62,108 @@
     z-index: 1;
     height: 32px;
     background-image: linear-gradient(to top left, #f2f2f2 50%, #ffffff 50%);
+
+    @media (#{$desktop}) {
+      height: 95px;
+    }
+  }
+
+  @media (#{$tablet}) {
+    padding-top: 44px;
+    padding-left: 350px;
+    padding-bottom: 30px;
+    background-position: 50px bottom;
+  }
+
+  @media (#{$desktop}) {
+    padding: 0;
+    background-image: none;
+  }
+}
+
+.desc__offers-inner {
+  @media (#{$desktop}) {
+    @include container;
+    display: flex;
   }
 }
 
 .desc__offer {
   width:280px;
-  margin:0 auto;
+  margin:30px auto 0;
   text-align:center;
+
+  @media (#{$tablet}){
+    width: 310px;
+    margin-top: 34px;
+    margin-left: 0;
+    text-align: left;
+  }
+
+  @media (#{$desktop}) {
+
+    position: relative;
+    padding-top: 300px;
+    background-color: $midlight;
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: "";
+      height: 330px;
+      width: 310px;
+      background: url("/img/iphone-screen-mobile@1x.png")
+        no-repeat 50% 120%;
+      z-index: 2;
+      overflow: hidden;
+    }
+  }
 }
 
 .desc__offer-title{
-  font-family: "Open Sans";
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  @inclide @opensans;
   font-size:18px;
   font-weight:700;
   line-height: 24px;
+
+  @media (#{$tablet}){
+    margin-bottom: 12px;
+  }
+
+  @media (#{$desktop}) {
+    position: relative;
+    z-index: 3;
+    width: 230px;
+    padding-top: 60px;
+    background-color: $midlight;
+    margin: 0 auto 18px;
+
+    text-align: center;
+    font-size: 30px;
+    line-height: 30px;
+  }
 }
 
 .desc__offer-txt {
-  font-family: "Open Sans";
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  @inclide @opensans;
   color: #283645;
   font-size: 14px;
   font-weight: 400;
+  line-height: 25px;
+
+  @media (#{$tablet}){
+    line-height: 24px;
+  }
+
+  @media (#{$desktop}) {
+    text-align: center;
+    font-size: 18px;
+    line-height: 30px;
+  }
 }

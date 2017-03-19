@@ -1,21 +1,46 @@
 .contacts__inner {
-  width:280px;
-  margin:0 auto;
+  @include container;
   text-align: center;
 
   @include opensans;
+
+  @media (#{$tablet})  {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
+
 
 .contacts__subtitle {
   color: #283645;
   font-size: 24px;
   font-weight: 300;
+
+  @media (#{$tablet}) {
+    width: 410px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 40px;
+    line-height: 50px;
+  }
 }
 
 .contacts__item {
   color: #283645;
   font-size: 18px;
   font-weight: 700;
+
+  @media (#{$tablet}) {
+    width: 310px;
+    margin-bottom: 40px;
+  }
+
+  &--addres {
+    @media (#{$tablet}) {
+      width: 290px;
+    }
+  }
 }
 
 .contacts__detail {
