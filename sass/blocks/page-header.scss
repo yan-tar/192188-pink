@@ -9,6 +9,9 @@
   &--nojs {
     background-position: 50% 257px;
   }
+  @media (#{$desktop}) {
+    heightL 395px;
+  }
 }
 
 .page-header__inner {
@@ -64,7 +67,7 @@
 .page-header--opened .page-header__top {
     background-color: $middark;
 
-    @media (#{$desktop}){
+    @media (#{$desktop}) {
       background-color: transparent;
      }
 }
@@ -192,5 +195,3 @@
   color: white;
   text-decoration: none;
 }
-
-
