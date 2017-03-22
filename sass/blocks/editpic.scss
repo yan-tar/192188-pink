@@ -1,39 +1,95 @@
 .editpic {
   background-color: $midlight;
-  padding: 20px;
+  padding: 20px 0 0;
   margin: 0 auto;
-  width: 280px;
+  min-width: 280px;
+
+  @media (#{$tablet}) {
+    height: 400px;
+    padding-top: 57px;
+    padding-bottom: 54px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
 }
 
-.editpic__tools-item{
+.editpic__photo {
+  display: block;
+  width: 280px;
+  margin: 0 auto;
+  @media (#{$tablet}) {
+    width: 300px;
+    margin-left: auto;
+    margin-right: 0;
+  }
+}
+.editpic__tools {
+  width: 240px;
+  margin: 0 auto;
+  padding-top: 25px;
+
+  @media (#{$tablet}) {
+    width: 276px;
+    margin-right: auto;
+    margin-left: 45px;
+    padding-top: 0;
+  }
+}
+
+.editpic__tools-list {
+  @media (#{$tablet}) {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.editpic__tools-item {
   width: 44px;
   height: 44px;
   display: inline-block;
   list-style-type:none;
 
-  &--crop::after {
+  &--crop {
     background: url("../img/icon-editor-crop.svg") no-repeat 0 0;
+    @media (#{$tablet}) {
+      height: 56px;
+    }
   }
 
   &--color {
     background: url("../img/icon-editor-fill.svg") no-repeat 0 0;
+    @media (#{$tablet}) {
+      height: 69px;
+    }
   }
 
   &--contrast {
     background: url("../img/icon-editor-contrast.svg") no-repeat 0 0;
+    @media (#{$tablet}) {
+      height: 70px;
+    }
+  }
+
+  @media (#{$tablet}) {
+    border-bottom: 1px solid #dddfe0;
   }
 }
 
 .editpic__range {
-  width: 250px;
+  width: 240px;
   height: 10px;
-  margin: 0 auto 40px;
+  margin: 0 auto 36px;
+  padding-top: 3px;
   border-bottom:2px solid black;
   position: relative;
 
   &::after {
     position: absolute;
-    top: 4px; left: 180px;
+    top: 7px; left: 192px;
     content: "";
     border: 2px solid $accent;
     border-radius: 50%;
@@ -43,18 +99,54 @@
   }
 }
 
+.editpic__tools-item .editpic__range {
+  display:none;
+
+  @media (#{$tablet}) {
+    display: block;
+    width: 202px;
+    margin-left: 56px;
+  }
+}
+
+.editpic__tools > .editpic__range {
+  @media (#{$tablet}) {
+    display: none;
+  }
+}
+
+
 .editpic__btns {
-  border-top:1px solid #dddfe0;
   padding-top: 26px;
   padding-bottom:29px;
+  border-top:1px solid #dddfe0;
+
+  @media (#{$tablet}) {
+    width: 300px;
+    margin-left: 45px;
+    padding-top: 54px;
+    padding-bottom: 0;
+    border-top: none;
+  }
 }
 
 .editpic__btn {
+  height: 49px;
+  line-height: 45px;
   border-color: $accent;
   color: $accent;
+
+  @media (#{$tablet}) {
+    width: 261px;
+    margin-bottom: 25px;
+  }
 }
 
 .editpic__btn--faden {
   border-color: #dddfe0;
   color: #dddfe0;
+
+  @media (#{$tablet}) {
+    margin-bottom: 0;
+  }
 }

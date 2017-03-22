@@ -23,15 +23,18 @@
 }
 
 
-@mixin container() {
-  width:280px;
-  margin:0 auto;
+@mixin container {
+  min-width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
 
-  @media (#{$tablet-width}){
-    width:768px;
+  @media (#{$tablet}){
+    width: 620px;
   }
 
-  @media (#{$desktop-width}){
-    width:1050px;
+  @media (#{$desktop}){
+    width: 940px;
   }
 }

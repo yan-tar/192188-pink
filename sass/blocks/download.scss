@@ -1,41 +1,95 @@
 .download {
-  background-color: $middark;
-  color:#fff;
+  width: 280px;
+  margin:0 auto;
+  padding:423px 0 15px;
+  text-align:center;
+  background: url("../img/iphone-hand-mobile@1x.png")
+    no-repeat 50% 110px;
+
+  @media (#{$tablet}){
+    width: 320px;
+    height: 547px;
+    padding: 71px 320px 0 0;
+  }
+
+  @media (#{$desktop}){
+    width: 300px;
+    height: 643px;
+    padding: 100px 640px 0 0;
+  }
 }
 
-.download__inner {
-  background-color: $dark;
-  width:280px;
-  padding:28px 0 28px;
-  margin:0 auto;
+.download__slogan {
+  display:none;
+
+  @media (#{$tablet}){
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 30px;
+
+    @include opensans(300);
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  @media (#{$desktop}){
+    font-size: 50px;
+    margin-top: 9px;
+    margin-bottom: 50px;
+    line-height: 60px;
+  }
 }
 
 .download__btn {
   margin:0 auto;
-  width: 274px;
-  height: 55px;
+  height: 49px;
   border: 3px solid white;
-  border-radius: 50px;
+  border-radius: 45px;
   color: white;
-  font-family: "Open Sans";
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 55px;
-  text-align:center;
+  line-height: 49px;
+
+  @media (#{$tablet}){
+    width: 294px;
+  }
+  @media (#{$desktop}){
+    margin-top: 20px;
+  }
 }
 
 .download__os-list {
-  margin:0;
+  margin:32px 0 0 0;
+  padding: 0 20px;
+  display:flex;
+  justify-content: space-around;
+
+  @media (#{$tablet}){
+    padding: 0 40px;
+    margin-top: 48px;
+  }
+  @media (#{$desktop}){
+    padding: 0 30px;
+    margin-top: 68px;
+  }
 }
 
 .download__os-item {
   list-style-type:none;
+
 }
 
 .download__txt {
+  margin-top: 12px;
   text-align: center;
   font-family: "Open Sans";
   font-size: 14px;
   font-weight: 300;
   line-height: 24px;
+
+  @media (#{$tablet}){
+    margin-top: 25px;
+    font-size: 18px;
+  }
+  @media (#{$desktop}){
+    margin-top: 44px;
+  }
 }
