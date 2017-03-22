@@ -1,8 +1,23 @@
+.social {
+  width: 179px;
+  margin: 30px auto 36px;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+
+  @media (#{$tablet}) {
+    margin-top: 0;
+  }
+}
+
 .social__item {
-  list-style-type: none;
   width:47px;
   height: 47px;
-  display:inline-block;
+  list-style-type: none;
   border: 2px solid #e9ebec;
   border-radius: 50%;
 }
+
+.social__item img {
+  vertical-align: bottom;
+  }

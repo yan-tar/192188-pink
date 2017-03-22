@@ -6,6 +6,9 @@
   &--opened {
     background-position: 50% 257px;
   }
+  &--nojs {
+    background-position: 50% 257px;
+  }
 }
 
 .page-header__inner {
@@ -55,16 +58,15 @@
   }
 }
 
+.page-header--nojs .page-header__top {
+  background-color: $middark;
+}
 .page-header--opened .page-header__top {
     background-color: $middark;
 
     @media (#{$desktop}){
       background-color: transparent;
      }
-}
-
-.page-header--opened .page-header__toggle {
-  background: url(../img/icon-menu-cross.svg) no-repeat 0 0;
 }
 
 .page-header__logo{
@@ -101,24 +103,37 @@
   }
 }
 
-.page-header--opened  .page-header__toggle{
-  background: url(../img/icon-menu-cross.svg) no-repeat 0 0;
-}
-
-.page-header--closed  .page-header__toggle{
+.page-header  .page-header__toggle{
   background: url(../img/icon-menu-burger.svg) no-repeat 0 0;
 }
 
+.page-header--opened  .page-header__toggle,
+.page-header--nojs  .page-header__toggle {
+  background: url(../img/icon-menu-cross.svg) no-repeat 0 0;
+}
+
+
 .page-header__subtitle {
-  height: 134px;
+  height: 141px;
   width: 180px;
-  padding-top: 36px;
+  padding-top: 29px;
   margin:0 auto;
   text-align: center;
   color: white;
   @include opensans;
   font-size: 24px;
   font-weight: 300;
+
+  @media (#{$tablet}) {
+    height: 260px;
+    width: 370px;
+    padding-top: 69px;
+    font-size: 50px;
+    line-height: 60px;
+  }
+  @media (#{$desktop}) {
+    padding-top: 64px;
+  }
 }
 
 .page-header__nav{
@@ -127,7 +142,7 @@
   }
 }
 
-.page-header--closed  .page-header__nav {
+.page-header  .page-header__nav {
     display:none;
 }
 

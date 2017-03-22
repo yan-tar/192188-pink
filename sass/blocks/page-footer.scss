@@ -1,12 +1,35 @@
 .page-footer {
-  width: 320px;
-  margin: 0 auto;
+  @include container;
+  padding-top: 40px;
   text-align:center;
+
+  @media (#{$tablet}) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (#{$desktop}) {
+    width: 940px;
+  }
+}
+
+.page-footer__logo {
+  @media (#{$desktop}) {
+    width: 155px;
+  }
 }
 
 .page-footer__copyright {
   vertical-align: middle;
   line-height: 34px;
+
+  @media (#{$tablet}) {
+    text-align: right;
+    width: 150px;
+  }
+  @media (#{$desktop}) {
+    width: 155px;
+  }
 }
 
 .page-footer__copyright img {
