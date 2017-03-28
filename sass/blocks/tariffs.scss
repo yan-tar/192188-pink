@@ -46,7 +46,7 @@
   }
   @media (#{$desktop}) {
     width: 940px;
-    margin-top: 55px;
+    margin-top: 63px;
     margin-bottom: 180px;
   }
 }
@@ -96,7 +96,7 @@
     @media (#{$desktop}) {
       width: 155px;
       font-size: 18px;
-      padding: 15px 20px 15px 10px;
+      padding: 15px 10px 15px 20px;
     }
   }
 
@@ -126,8 +126,8 @@
     &::after {
       content: "ХИТ";
       position: absolute;
-      top: 0; left: 0;
-      transform: scale(45%);
+      top: 11px; left: 11px;
+      transform: rotate(-45deg);
     }
   }
 
@@ -135,7 +135,7 @@
     height: 80px;
   }
   @media (#{$desktop}) {
-    height: 95px;
+    height: 98px;
   }
 }
 
