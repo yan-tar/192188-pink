@@ -8,6 +8,9 @@
   @media (#{$tablet}) {
     margin-top: 0;
   }
+  @media (#{$desktop}) {
+    margin-top: 5px;
+  }
 }
 
 .social__item {

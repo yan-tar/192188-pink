@@ -162,6 +162,8 @@
   }
 
   @media (#{$desktop}) {
+    width: 240px;
+    margin: 10px auto;
     text-align: center;
     font-size: 18px;
     line-height: 30px;

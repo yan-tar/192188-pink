@@ -1,6 +1,6 @@
 .page-footer {
   @include container;
-  padding-top: 40px;
+  padding-top: 65px;
   text-align:center;
 
   @media (#{$tablet}) {
@@ -11,6 +11,18 @@
   @media (#{$desktop}) {
     width: 940px;
   }
+}
+
+.main-page .page-footer {
+  display: none;
+
+  @media (#{$tablet}) {
+    display: block;
+  }
+}
+
+.form_page  .page-footer {
+  padding-top: 42px;
 }
 
 .page-footer__logo {
@@ -29,6 +41,9 @@
   }
   @media (#{$desktop}) {
     width: 155px;
+    padding-top: 10px;
+    font-size: 18px;
+    line-height: 18px;
   }
 }
 

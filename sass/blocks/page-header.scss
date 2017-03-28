@@ -10,7 +10,13 @@
     background-position: 50% 257px;
   }
   @media (#{$desktop}) {
-    heightL 395px;
+    height: 395px;
+  }
+}
+
+.main_page .page-header {
+  @media (#{$desktop}) {
+    height: 853px;
   }
 }
 
@@ -127,6 +133,8 @@
   font-size: 24px;
   font-weight: 300;
 
+
+
   @media (#{$tablet}) {
     height: 260px;
     width: 370px;
@@ -136,6 +144,17 @@
   }
   @media (#{$desktop}) {
     padding-top: 64px;
+  }
+
+  &--long {
+    width: 230px;
+
+    @media (#{$tablet}) {
+      width: 500px;
+    }
+    @media (#{$desktop}) {
+      width: 820px;
+    }
   }
 }
 
