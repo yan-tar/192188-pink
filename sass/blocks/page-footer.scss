@@ -4,20 +4,22 @@
   text-align:center;
 
   @media (#{$tablet}) {
+    padding-top: 41px;
     display: flex;
     justify-content: space-between;
   }
 
   @media (#{$desktop}) {
+    padding-top: 65px;
     width: 940px;
   }
 }
 
-.main-page .page-footer {
+.page-footer--main {
   display: none;
 
   @media (#{$tablet}) {
-    display: block;
+    display: flex;
   }
 }
 
@@ -26,8 +28,47 @@
 }
 
 .page-footer__logo {
+  width: 150px;
+  height: 41px;
+  margin: 0 auto;
+  @media (#{$tablet}) {
+    margin-left: 0;
+  }
   @media (#{$desktop}) {
     width: 155px;
+  }
+}
+
+.page-footer__logo a {
+  display: block;
+
+  width: 150px;
+  min-height: 41px;
+
+  background: url(../img/logo-pink-blue-mobile.svg) no-repeat 0 0;
+  background-size: 150px;
+
+  font-size: 0; line-height: 0;
+
+  &:hover {
+    background-image: url(../img/logo-pink-pink-mobile.svg)
+  }
+  &:active {
+    opacity: 0.3;
+    background-image: url(../img/logo-pink-blue-mobile.svg);
+  }
+
+  @media (#{$desktop}) {
+    width: 155px;
+    background: url(../img/logo-pink-blue-desktop.svg) no-repeat 0 0;
+
+    &:hover {
+      background-image: url(../img/logo-pink-pink-desktop.svg)
+    }
+    &:active {
+      opacity: 0.3;
+      background-image: url(../img/logo-pink-blue-desktop.svg);
+    }
   }
 }
 
@@ -36,17 +77,35 @@
   line-height: 34px;
 
   @media (#{$tablet}) {
-    text-align: right;
     width: 150px;
+    height: 41px;
+    padding-top: 12px;
+    text-align: right;
   }
   @media (#{$desktop}) {
-    width: 155px;
-    padding-top: 10px;
+    width: 165px;
+    padding-top: 12px;
     font-size: 18px;
     line-height: 18px;
   }
 }
 
-.page-footer__copyright img {
+.page-footer__copyright svg {
+  padding-left: 10px;
   vertical-align: middle;
+  fill: $accent;
+
+  &:hover {
+    fill: #283645;
+  }
+  &:active {
+    fill: #283645;
+    opacity: 0.3;
+  }
+
+  @media (#{$tablet}) {
+    width: 29px;
+    height: 36px;
+
+  }
 }

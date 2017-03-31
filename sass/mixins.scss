@@ -38,3 +38,26 @@
     width: 940px;
   }
 }
+
+@mixin opensans($fv:300){
+  font-family: "Open Sans", Arial, serif;
+  font-weight: $fv;
+}
+
+@mixin h2 {
+  font-family: $opensanslight;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 28px;
+
+  @media (#{$tablet}){
+    font-size: 40px;
+    line-height: 50px;
+    margin: 20px 0;
+  }
+
+  @media (#{$desktop}){
+    font-size: 50px;
+    line-height: 60px;
+  }
+}

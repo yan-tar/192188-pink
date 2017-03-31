@@ -7,17 +7,18 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body class="photo_page">
+<svg class="symbols" xmlns="http://www.w3.org/2000/svg"><symbol id="icon-facebook" viewBox="0 0 8.673 18.944"><path d="M6.275 3.357h2.398V0H5.795C2.656.181 1.54 2.387 1.948 6.115H0v3.517h1.958v9.312h3.837V9.632h2.857V6.115H5.786c-.021-1.045-.036-2.406.489-2.758z"/></symbol><symbol id="icon-twitter" viewBox="0 0 17.5 14.663"><path d="M11.283.153c1.736-.485 3.074.263 3.685 1.151.694-.226 1.372-.47 2.072-.691-.004.841-.538 1.478-.883 1.727.704.166 1.343-.48 1.343-.48-.175.976-1.035 1.746-1.611 1.977-.239 6.592-3.272 10.956-10.382 10.823h-.46c-.422 0-4.29-.45-5.047-1.843 2.341.192 4.011-.412 4.835-1.15-.989-.293-2.761-.464-3.07-2.881.362.105.583.223 1.228.117C1.757 8.067.385 7.366.461 5.218c.294.32 1.1.523 1.381.461C1.117 5.444-.188 2.398.921.843 2.794 2.654 4.769 4.364 8.29 4.528 8.506 2.288 9.461.787 11.283.153z"/></symbol><symbol id="icon-youtube" viewBox="0 0 14.64 13.96"><path d="M1.775 13.78C.799 14.257 0 13.758 0 12.671V1.29C0 .202.799-.295 1.775.181l12.133 5.932c.975.478.975 1.258 0 1.736L1.775 13.78z"/></symbol><symbol id="logo-htmlacademy" viewBox="0 0 26.943 34.09"><path d="M13.62.017L13.472 0 0 1.412v24.661l13.472 8.017 13.43-7.99.042-.026V1.412L13.62.017zm11.399 12.11L13.495 5.334l-.001-.104-.087.05-.088-.056v.109L1.925 12.118V3.147l11.547-1.212 11.547 1.212v8.98zm-11.614-5.34L24.923 13.5l-4.479 2.64-7.093-4.221-.013 1.415 5.904 3.513-.86.507-5.031-2.992-.013 1.415 3.827 2.275-.782.523-3.032-1.787-.013 1.413 1.852 1.091-1.8 1.081-11.356-6.751 11.371-6.835zm-11.48 8.34l11.411 6.791.015 1.044-7.941-4.728-.015 1.416 7.979 4.796.017 1.076-7.972-4.741-.013 1.415 8.021 4.821.045.026 8.143-4.872v-1.268l-.011-.148v-3.761l3.415-2.036v10.02L13.472 31.85 1.925 24.979v-9.852z"/></symbol></svg>
   <header class="page-header  page-header--opened">
     <div class="page-header__inner">
         <div class="page-header__top">
           <h1 class="page-header__title  visually-hidden">Pink</h1>
-          <div class="page-header__logo"><img src="img/logo-pink-white-mobile.svg" alt="PINK" title="PINK Logo"></div>
+          <div class="page-header__logo"><a title="PINK" href="index.html">Главная</a></div>
           <div class="page-header__toggle"></div>
         </div>
         <nav class="page-header__nav">
           <ul class="page-header__nav-list">
-            <li class="page-header__nav-item"><a>Главная</a></li>
-            <li class="page-header__nav-item"><a href="photo.html">Фотографии</a></li>
+            <li class="page-header__nav-item"><a href="index.html">Главная</a></li>
+            <li class="page-header__nav-item  page-header__nav-item--active"><a>Фотографии</a></li>
             <li class="page-header__nav-item"><a href="form.html">Конкурс</a></li>
             <li class="page-header__nav-item"><a href="http://htmlacademy.ru">HTML Academy</a></li>
           </ul>
@@ -28,10 +29,18 @@
   <main class="photocontent">
     <p class="photocontent__desc">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
   <section class="photocontent__panorama">
-    <img src="img/panorama-mobile%401x.jpg"   class="photocontent__panorama-img">
+    <picture>
+      <source media="(min-width: 1200px)"
+        srcset="img/panorama-desktop@2x.jpg 2x, img/panorama-desktop@1x.jpg 1x">
+      <source media="(min-width: 700px)"
+        srcset="img/panorama-tablet@2x.jpg 2x, img/panorama-tablet@1x.jpg 1x">
+      <source media="(min-width: 320px)"
+        srcset="img/panorama-mobile@2x.jpg 2x, img/panorama-mobile@1x.jpg 1x">
+      <img src="img/panorama-mobile@1x.jpg" class="photocontent__panorama-img" alt="Панорама дня">
+    </picture>
     <div class="photocontent__panorama-desc">
       <header class="photocontent__header">
-        <h3 class="photocontent__author  photocontent__author--panorama">Анна <time class="photocontent__time">(5 минут назад)</time></h3>
+        <h3 class="photocontent__author  photocontent__author--panorama">Анна <span class="photocontent__time">(5 минут назад)</span></h3>
       </header>
       <p class="photocontent__txt">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
       <footer class="photocontent__likes  photocontent__likes--panorama">нравится: 215</footer>
@@ -39,60 +48,108 @@
   </section>
   <div class="photocontent__items">
     <section class="photocontent__item">
-      <img src="/img/photo-1-mobile%401x.jpg">
+      <picture>
+        <source media="(min-width: 1200px)"
+          srcset="img/photo-1-desktop@2x.jpg 2x, img/photo-1-desktop@1x.jpg 1x">
+        <source media="(min-width: 700px)"
+          srcset="img/photo-1-tablet@2x.jpg 2x, img/photo-1-tablet@1x.jpg 1x">
+        <source media="(min-width: 320px)"
+          srcset="img/photo-1-mobile@2x.jpg 2x, img/photo-1-mobile@1x.jpg 1x">
+        <img src="/img/photo-1-mobile@1x.jpg" alt="Левон, 5 часов назад">
+      </picture>
       <div class="photocontent__item-desc">
         <header class="photocontent__header">
-          <h3 class="photocontent__author">Левон <time class="photocontent__time">(5 часов назад)</time></h3>
+          <h3 class="photocontent__author">Левон <span class="photocontent__time">(5 часов назад)</span></h3>
         </header>
         <p class="photocontent__txt">Вчера он на луну летал, сегодня в руки в нам попал</p>
         <footer class="photocontent__likes">нравится: 356</footer>
       </div>
     </section>
     <section class="photocontent__item">
-      <img src="/img/photo-2-mobile%401x.jpg" width="280" height="180">
+      <picture>
+        <source media="(min-width: 1200px)"
+          srcset="img/photo-2-desktop@2x.jpg 2x, img/photo-2-desktop@1x.jpg 1x">
+        <source media="(min-width: 700px)"
+          srcset="img/photo-2-tablet@2x.jpg 2x, img/photo-2-tablet@1x.jpg 1x">
+        <source media="(min-width: 320px)"
+          srcset="img/photo-2-mobile@2x.jpg 2x, img/photo-2-mobile@1x.jpg 1x">
+        <img src="/img/photo-2-mobile@1x.jpg" alt="Антон, 12 часов назад">
+      </picture>
       <div class="photocontent__item-desc">
         <header class="photocontent__header">
-          <h3 class="photocontent__author">Антон <time class="photocontent__time">(12 часов назад)</time></h3>
+          <h3 class="photocontent__author">Антон <span class="photocontent__time">(12 часов назад)</span></h3>
         </header>
         <p class="photocontent__txt">Соседи будут рады!</p>
         <footer class="photocontent__likes">нравится: 666</footer>
       </div>
     </section>
     <section class="photocontent__item">
-      <img src="/img/photo-3-mobile%401x.jpg" width="280" height="180">
+      <picture>
+        <source media="(min-width: 1200px)"
+          srcset="img/photo-3-desktop@2x.jpg 2x, img/photo-3-desktop@1x.jpg 1x">
+        <source media="(min-width: 700px)"
+          srcset="img/photo-3-tablet@2x.jpg 2x, img/photo-3-tablet@1x.jpg 1x">
+        <source media="(min-width: 320px)"
+          srcset="img/photo-3-mobile@2x.jpg 2x, img/photo-3-mobile@1x.jpg 1x">
+        <img src="img/photo-3-mobile@1x.jpg" alt="Борис, 20 часов назад">
+      </picture>
       <div class="photocontent__item-desc">
         <header class="photocontent__header">
-          <h3 class="photocontent__author">Борис <time class="photocontent__time">(20 часов назад)</time></h3>
+          <h3 class="photocontent__author">Борис <span class="photocontent__time">(20 часов назад)</span></h3>
         </header>
         <p class="photocontent__txt">Здесь могла быть ваша цитата о высоком и вечном</p>
         <footer class="photocontent__likes">нравится: 215</footer>
       </div>
     </section>
     <section class="photocontent__item">
-      <img src="/img/photo-4-mobile%401x.jpg" width="280" height="180">
+      <picture>
+        <source media="(min-width: 1200px)"
+          srcset="img/photo-4-desktop@2x.jpg 2x, img/photo-4-desktop@1x.jpg 1x">
+        <source media="(min-width: 700px)"
+          srcset="img/photo-4-tablet@2x.jpg 2x, img/photo-4-tablet@1x.jpg 1x">
+        <source media="(min-width: 320px)"
+          srcset="img/photo-4-mobile@2x.jpg 2x, img/photo-4-mobile@1x.jpg 1x">
+        <img src="img/photo-4-mobile@1x.jpg" alt="Сергей, 25 часов назад">
+      </picture>
       <div class="photocontent__item-desc">
         <header class="photocontent__header">
-          <h3 class="photocontent__author">Сергей <time class="photocontent__time">(25 часов назад)</time></h3>
+          <h3 class="photocontent__author">Сергей <span class="photocontent__time">(25 часов назад)</span></h3>
         </header>
         <p class="photocontent__txt">Самая кубанская в мире!</p>
         <footer class="photocontent__likes">нравится: 4</footer>
       </div>
     </section>
     <section class="photocontent__item">
-      <img src="/img/photo-5-mobile%401x.jpg" width="280" height="180">
+      <picture>
+        <source media="(min-width: 1200px)"
+          srcset="img/photo-5-desktop@2x.jpg 2x, img/photo-5-desktop@1x.jpg 1x">
+        <source media="(min-width: 700px)"
+          srcset="img/photo-5-tablet@2x.jpg 2x, img/photo-5-tablet@1x.jpg 1x">
+        <source media="(min-width: 320px)"
+          srcset="img/photo-5-mobile@2x.jpg 2x, img/photo-5-mobile@1x.jpg 1x">
+        <img src="img/photo-5-mobile@1x.jpg" alt="Максим, 40 часов назад">
+      </picture>
       <div class="photocontent__item-desc">
         <header class="photocontent__header">
-          <h3 class="photocontent__author">Максим <time class="photocontent__time">(40 часов назад)</time></h3>
+          <h3 class="photocontent__author">Максим <span class="photocontent__time">(40 часов назад)</span></h3>
         </header>
         <p class="photocontent__txt">Где снег-то,</p>
         <footer class="photocontent__likes">нравится: 150</footer>
       </div>
     </section>
     <section class="photocontent__item">
-      <img src="/img/photo-6-mobile%401x.jpg" width="280" height="180">
+      <picture>
+        <source media="(min-width: 1200px)"
+          srcset="img/photo-6-desktop@2x.jpg 2x, img/photo-6-desktop@1x.jpg 1x">
+        <source media="(min-width: 700px)"
+          srcset="img/photo-6-tablet@2x.jpg 2x, img/photo-6-tablet@1x.jpg 1x">
+        <source media="(min-width: 320px)"
+          srcset="img/photo-6-mobile@2x.jpg 2x, img/photo-6-mobile@1x.jpg 1x">
+        <img src="img/photo-6-mobile@1x.jpg" alt="Надежда, 45 часов назад">
+      </picture>
       <div class="photocontent__item-desc">
         <header class="photocontent__header">
-          <h3 class="photocontent__author">Надежда <time class="photocontent__time">(45 часов назад)</time></h3>
+          <h3 class="photocontent__author">Надежда <span class="photocontent__time">(45 часов назад)</span></h3>
         </header>
         <p class="photocontent__txt">Всем GM и взаимные лайки</p>
         <footer class="photocontent__likes">нравится: 2560</footer>
@@ -102,30 +159,37 @@
   <p class="photocontent__slogan">Затмите их всех! <br />Выкладывайте все, что накопилось в&nbsp;телефоне!</p>
   </main>
   <section class="editpic">
-    <img class="editpic__photo" src="/img/photo-7-mobile%401x.jpg" width="" height=""></img>
+    <picture class="editpic__photo">
+        <source media="(min-width: 1200px)"
+          srcset="img/photo-7-desktop@2x.jpg 2x, img/photo-7-desktop@1x.jpg 1x">
+        <source media="(min-width: 700px)"
+          srcset="img/photo-7-tablet@2x.jpg 2x, img/photo-7-tablet@1x.jpg 1x">
+        <source media="(min-width: 320px)"
+          srcset="img/photo-7-mobile@2x.jpg 2x, img/photo-7-mobile@1x.jpg 1x">
+        <img src="img/photo-7-mobile@1x.jpg" alt="">
+      </picture>
     <div class="editpic__tools">
       <ul class="editpic__tools-list">
-        <li class="editpic__tools-item  editpic__tools-item--crop"><div class="editpic__range"></div></li>
+        <li class="editpic__tools-item  editpic__tools-item--crop  editpic__tools-item--active"><div class="editpic__range"></div></li>
         <li class="editpic__tools-item  editpic__tools-item--color">
         <div class="editpic__range"></div></li>
         <li class="editpic__tools-item  editpic__tools-item--contrast">
         <div class="editpic__range"></div></li>
       </ul>
-      <div class="editpic__range"></div>
     </div>
     <div class="editpic__btns">
       <div class="btn editpic__btn">Запостить</div>
       <div class="btn editpic__btn  editpic__btn--faden">Отмена</div>
     </div>
   </section>
-  <footer class="page-footer">
-    <div class="page-footer__logo"><img src="../img/logo-pink-blue-mobile.svg"></div>
+  <footer class="page-footer  page-footer--photo">
+    <div class="page-footer__logo"><a href="index.html">Главная</a></div>
     <ul class="social">
-      <li class="social__item"><img src="/../img/icon-twitter.svg" alt="Twitter" ></li>
-      <li class="social__item"><img src="/../img/icon-facebook.svg" alt="Facebook" ></li>
-      <li class="social__item"><img src="/../img/icon-youtube.svg" alt="YouTube"></li>
+      <li class="social__item"><a href="http://twitter.com"><svg width="17" height="14"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-twitter"></use></svg></a></li>
+      <li class="social__item"><a href="http://facebook.com"><svg width="9" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-facebook"></use></svg></a></li>
+      <li class="social__item"><a href="http://youtube.com"><svg width="17" height="14"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-youtube"></use></svg></a></li>
     </ul>
-    <div class="page-footer__copyright">Разработано <a href=""><img src="../img/htmlacademy.svg" alt="HTML Academy logo" title="HTML Academy" width="27" height="34"></a></div>
+    <div class="page-footer__copyright">Разработано <a href="http://htmlacademy.ru"><svg width="29" height="34"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-htmlacademy"></use></svg></a></div>
   </footer>
   <script>
     var pageHeader = document.querySelector('.page-header');
@@ -134,10 +198,12 @@
     pageHeader.classList.remove('page-header--nojs');
 
     navToggle.addEventListener('click', function() {
-      if (pageHeader.classList.contains('page-header--opened')) {
-        pageHeader.classList.remove('page-header--opened');
-      } else {
+      if (pageHeader.classList.contains('page-header--closed')) {
+        pageHeader.classList.remove('page-header--closed');
         pageHeader.classList.add('page-header--opened');
+      } else {
+        pageHeader.classList.add('page-header--closed');
+        pageHeader.classList.remove('page-header--opened');
       }
     });
   </script>

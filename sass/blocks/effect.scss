@@ -14,10 +14,31 @@
 .effect__inner {
   @include container;
   padding: 98px 40px 20px;
+  background: url(../img/icon-timer.svg) no-repeat 40px 60px;
+  background-size: 240px;
+  position: relative;
+
+  &::before {
+    content: "24";
+    width: 240px; height: 240px;
+    position: absolute;
+    top: 196px; left: 105px;
+    font-family:$opensansbold;
+    font-size: 96px;
+    color: #d22856;
+
+    @media (#{$desktop}) {
+      top: 230px;
+      left: 121px;
+      font-size: 120px;
+    }
+  }
 
   @media (#{$desktop}) {
     padding-top: 150px;
     padding-bottom: 82px;
+    background-position: 40px 57px;
+    background-size: 300px;
   }
 }
 
@@ -32,7 +53,7 @@
 }
 
 .effect__title {
-  @include opensans (700);
+  font-family:$opensansbold;
   font-size: 30px;
   line-height: 36px;
   margin-top: 0;

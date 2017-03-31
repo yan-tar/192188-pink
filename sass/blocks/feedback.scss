@@ -7,6 +7,8 @@
     padding-bottom: 20px;
   }
   @media (#{$desktop}) {
+    width: 960px;
+    margin: 0 auto;
     padding-bottom: 10px;
   }
 }
@@ -23,15 +25,15 @@
   }
 
   @media (#{$desktop}) {
-    padding-top: 125px;
-    padding-bottom: 30px;
+    padding: 125px 0 30px;
+    background: url(../img/icon-quotes.svg) no-repeat 50% 30px;
   }
 }
 
 .feedback__author {
   display: block;
   margin: 0;
-  @inclide @opensans(700);
+  font-family:$opensansbold;
   font-size: 18px;
   line-height: 30px;
 
@@ -61,7 +63,7 @@
 
 .feedback__txt {
   color: #283645;
-  @inclide @opensans(400);
+  font-family:$opensans;
   font-size: 14px;
   line-height: 30px;
   text-align:center;

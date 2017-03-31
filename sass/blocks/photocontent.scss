@@ -21,7 +21,7 @@
   position:relative;
   text-align: center;
 
-  @include opensans(400);
+  font-family:$opensans;
   font-size: 14px;
   line-height: 30px;
 
@@ -82,11 +82,11 @@
 
   @media (#{$tablet}) {
     width: 100%;
-    height: 509px;
+    height: auto;
   }
 
   @media (#{$desktop}) {
-    height: 506px;
+    height: auto;
   }
 }
 
@@ -100,7 +100,7 @@
   background-color: $midlight;
   position:relative;
 
-  @include opensans(400);
+  font-family:$opensans;
   font-size: 14px;
   line-height: 30px;
 
@@ -146,6 +146,9 @@
     margin-left: 0;
     margin-right: 0;
   }
+  @media (#{$desktop}) {
+    margin-bottom: 52px;
+  }
 }
 
 .photocontent__item img {
@@ -153,7 +156,7 @@
   margin:0; padding:0;
   @media (#{$tablet}) {
     width: 300px;
-    height: 300px;
+    height: auto;
   }
 }
 
@@ -167,7 +170,7 @@
   background-color: $midlight;
   position:relative;
 
-  @include opensans(400);
+  font-family:$opensans;
   font-size: 14px;
   line-height: 30px;
 
@@ -194,12 +197,15 @@
 .photocontent__author {
   margin-top: 0;
   margin-bottom: 0;
+  font-family: $opensansbold;
+  font-weight: 700;
   font-size: 14px;
   line-height: 24px;
 }
 
 .photocontent__time {
   font-size: 12px;
+  font-family: $opensanslight;
   font-weight: 300;
   text-transform: uppercase;
 }
@@ -258,6 +264,9 @@
     line-height: 30px;
     padding-top: 42px;
     padding-bottom: 70px;
+  }
+  @media (#{$desktop}) {
+    padding-top: 7px;
   }
 }
 

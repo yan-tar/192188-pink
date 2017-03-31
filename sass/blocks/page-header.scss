@@ -1,16 +1,39 @@
 .page-header {
   color:#fff;
-  background: $dark url(/img/bg-back-mobile%401x.jpg)
+  background: $dark url(../img/bg-back-mobile%401x.jpg)
     no-repeat 50% top;
 
   &--opened {
     background-position: 50% 257px;
+    @media (#{$desktop}) {
+      background-position: 50% top;
+    }
   }
   &--nojs {
     background-position: 50% 257px;
+    @media (#{$desktop}) {
+      background-position: 50% top;
+    }
   }
+  @media (#{$tablet}) {
+    background-image: url(../img/bg-back-tablet%401x.jpg);
+  }
+
   @media (#{$desktop}) {
-    height: 395px;
+    background-image: url(../img/bg-back-desktop%401x.jpg);
+    background-size: cover;
+  }
+}
+
+@media (min-resolution: 1.5dppx), (min-resolution: 144dpi) {
+  .page-header{
+    background-image: url(../img/bg-back-mobile%402x.jpg);
+    @media (#{$tablet}) {
+      background-image: url(../img/bg-back-tablet%402x.jpg);
+    }
+    @media (#{$desktop}) {
+      background-image: url(../img/bg-back-desktop%402x.jpg);
+    }
   }
 }
 
@@ -34,12 +57,16 @@
 
   @media (#{$desktop}) {
     min-width: 940px;
-    height: 110px;
+    min-height: 110px;
     padding: 0 10px;
     background-color: rgba(0,0,0,0.3);
     display: flex;
     justify-content: center;
   }
+}
+
+.page-header--closed .page-header__inner {
+  background-color: rgba(0,0,0,0.3);
 }
 
 .page-header__top {
@@ -78,9 +105,10 @@
     }
 }
 
-.page-header__logo{
+.page-header__logo {
   padding: 22px 0 25px;
   width: 230px;
+  font-size: 0;
 
   @media (#{$tablet}){
     width: 595px;
@@ -90,9 +118,46 @@
   }
 }
 
-.page-header__logo img {
+.page-header__logo a {
+  display: block;
   width:75px;
   height: 22px;
+  background: url(../img/logo-pink-white-mobile.svg) no-repeat 0 0;
+
+  &:hover {
+    background-image: url(../img/logo-pink-white-hover-mobile.svg);
+  }
+  &:active {
+    opacity: 0.3;
+    background-image: url(../img/logo-pink-white-mobile.svg);
+  }
+
+  @media (#{$tablet}) {
+    width: 147px;
+    height: 40px;
+    margin-top: 5px;
+    background-image: url(../img/logo-pink-white-tablet.svg);
+
+    &:hover {
+      background-image: url(../img/logo-pink-white-hover-tablet.svg);
+    }
+    &:active {
+      opacity: 0.3;
+      background-image: url(../img/logo-pink-white-tablet.svg);
+    }
+  }
+
+  @media (#{$desktop}) {
+    background-image: url(../img/logo-pink-white-desktop.svg);
+
+    &:hover {
+      background-image: url(../img/logo-pink-white-hover-desktop.svg);
+    }
+    &:active {
+      opacity: 0.3;
+      background-image: url(../img/logo-pink-white-desktop.svg);
+    }
+  }
 }
 
 .page-header__toggle {
@@ -113,12 +178,28 @@
 }
 
 .page-header  .page-header__toggle{
-  background: url(../img/icon-menu-burger.svg) no-repeat 0 0;
+  background: url(../img/icon-menu-burger.svg)
+    no-repeat 0 0;
+
+  &:hover {
+    background-image: url(../img/icon-menu-hover-burger.svg);
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .page-header--opened  .page-header__toggle,
 .page-header--nojs  .page-header__toggle {
   background: url(../img/icon-menu-cross.svg) no-repeat 0 0;
+  &:hover {
+    background-image: url(../img/icon-menu-hover-cross.svg);
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 
@@ -129,7 +210,7 @@
   margin:0 auto;
   text-align: center;
   color: white;
-  @include opensans;
+  font-family:$opensanslight;
   font-size: 24px;
   font-weight: 300;
 
@@ -144,6 +225,7 @@
   }
   @media (#{$desktop}) {
     padding-top: 64px;
+    height: 221px;
   }
 
   &--long {
@@ -166,6 +248,9 @@
 
 .page-header  .page-header__nav {
     display:none;
+    @media (#{$desktop}) {
+      display: block;
+    }
 }
 
 .page-header--opened .page-header__nav,
@@ -190,20 +275,21 @@
 }
 
 .page-header__nav-item {
+  height: 62px;
+  border-bottom: 1px solid #000;
+  border-top: 1px solid #485461;
   list-style-type: none;
   color: white;
   font-family: "Open Sans";
   font-size: 18px;
   font-weight: 700;
-  line-height: 62px;
+  line-height: 40px;
   text-transform: uppercase;
-  height: 62px;
-  border-bottom: 1px solid #000;
-  border-top: 1px solid #485461;
 
   @media (#{$desktop}){
-    height: 110px;
-    line-height: 110px;
+    height: 62px;
+    padding-top: 24px;
+    padding-bottom: 24px;
     text-transform: none;
     font-weight: normal;
     border: none;
@@ -211,6 +297,29 @@
 }
 
 .page-header__nav-item a {
+  display: inline-block;
+  height: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   color: white;
   text-decoration: none;
+  border-bottom: 2px solid transparent;
+
+  &:hover {
+    color: $accent;
+  }
+  &:active {
+    color: rgba(255, 255, 255, 0.3)
+  }
+}
+
+@media (#{$desktop}) {
+  .page-header__nav-item--active a {
+    border-bottom-color: white;
+
+    &:hover {
+      color: $accent;
+      border-bottom-color: $accent;
+    }
+  }
 }
