@@ -141,7 +141,7 @@
           Приезжайте в гости: <div class="contacts__detail">ул. Большая Конюшенная, 19/8</div>
         </div>
       </div>
-      <div class="contacts__map"></div>
+      <div class="contacts__map" id="map"></div>
     </section>
     <footer class="page-footer  page-footer--main">
       <div class="page-footer__logo"><a>Главная</a></div>
@@ -169,5 +169,22 @@
       }
     });
   </script>
+  <script>
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 59.936593, lng: 30.321051},
+          scrollwheel: true,
+          zoom: 16
+        });
+        var image = 'img/icon-map-marker.svg';
+        var marker = new google.maps.Marker({
+          position: {lat: 59.936113, lng: 30.321051},
+          map: map,
+          icon: image
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDmyxEsTzTcYjTEG6eMe0HmPXt2oIPz490&callback=initMap"
+    async defer></script>
   </body>
 </html>

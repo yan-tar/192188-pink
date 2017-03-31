@@ -19,80 +19,38 @@ $desk-pad-side: 50px;
 $retina1: "min-resolution: 1.5dppx";
 $retina2: "min-resolution: 144dpi";
 
-@mixin opensans($fv:300){
-  font-family: "Open Sans", Arial, serif;
-  font-weight: $fv;
+@font-face {
+  font-weight: normal;
+  font-family: OpenSans;
+  font-style: normal;
+
+  src: url(../fonts/opensans.woff2) format("woff2");
+  src: url(../fonts/opensans.woff) format("woff");
 }
 
-@mixin h2 {
-  @include opensans(300);
-  font-size: 24px;
-  line-height: 28px;
+@font-face {
+  font-weight: 700;
+  font-family: OpenSansBold;
+  font-style: normal;
 
-  @media (#{$tablet}){
-    font-size: 40px;
-    line-height: 50px;
-    margin: 20px 0;
-  }
-
-  @media (#{$desktop}){
-    font-size: 50px;
-    line-height: 60px;
-  }
+  src: url(../fonts/opensansbold.woff2)  format("woff2");
+  src: url(../fonts/opensansbold.woff)  format("woff");
 }
 
-img {
-  max-width: 100%;
-  height: auto;
+@font-face {
+  font-weight: 300;
+  font-family: OpenSansLight;
+  font-style: normal;
+
+  src: url(../fonts/opensanslight.woff2)  format("woff2");
+  src: url(../fonts/opensanslight.woff)  format("woff");
 }
 
-.symbols {
-  display:none;
-}
+$opensanslight: OpenSansLight, Arial, sans-serif;
+$opensans: OpenSans, Arial, sans-serif;
+$opensansbold: OpenSansBold, Arial, sans-serif;
 
-.btn {
-  margin:12px auto;
-  width: 274px;
-  height: 55px;
-  border: 3px solid white;
-  border-radius: 50px;
-
-  @include opensans(700);
-  font-size: 18px;
-  line-height: 55px;
-  text-align:center;
-
-  cursor: pointer;
-
-  @media (#{$desktop}){
-    font-size: 21px;
-    line-height: 18px;
-  }
-
-  &:hover {
-    background-color: #fff;
-    color: $accent;
-  }
-  &:active {
-    color: rgba($accent, 0.3);
-  }
-}
-
-.visually-hidden{
-  position: absolute;
-
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-
-  border: 0;
-
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
-body::after {
+/* body::after {
   content: "";
   width: 100%;
   position:absolute;
@@ -115,7 +73,7 @@ body::after {
       no-repeat 50% 0;
 
   }
-}
+} */
 
 body.photo_page::after {
   background: url(/psd/preview/pink-photo-mobile.jpg) no-repeat 50% 0;

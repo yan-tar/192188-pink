@@ -193,9 +193,9 @@
   margin-top: 10px;
   margin-bottom: 10px;
 
-  @inclide @opensans;
-  font-size:18px;
+  font-family:$opensansbold;
   font-weight:700;
+  font-size:18px;
   line-height: 24px;
 
   @media (#{$tablet}){
@@ -220,7 +220,7 @@
   margin-top: 10px;
   margin-bottom: 10px;
 
-  @inclide @opensans;
+  font-family:$opensans;
   color: #283645;
   font-size: 14px;
   font-weight: 400;

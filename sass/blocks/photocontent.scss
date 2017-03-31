@@ -21,7 +21,7 @@
   position:relative;
   text-align: center;
 
-  @include opensans(400);
+  font-family:$opensans;
   font-size: 14px;
   line-height: 30px;
 
@@ -100,7 +100,7 @@
   background-color: $midlight;
   position:relative;
 
-  @include opensans(400);
+  font-family:$opensans;
   font-size: 14px;
   line-height: 30px;
 
@@ -170,7 +170,7 @@
   background-color: $midlight;
   position:relative;
 
-  @include opensans(400);
+  font-family:$opensans;
   font-size: 14px;
   line-height: 30px;
 

@@ -24,7 +24,7 @@
   position:relative;
   text-align: center;
 
-  @include opensans(400);
+  font-family:$opensans;
   font-size: 14px;
   line-height: 30px;
 
@@ -86,7 +86,7 @@
   display: inline-block;
   padding-bottom: 5px;
   padding-left: 22px;
-  @include opensans(400);
+  font-family:$opensans;
   color: $accent;
   font-size: 14px;
   line-height: 30px;
@@ -129,7 +129,7 @@
   margin: 0 auto 17px;
   border: 2px solid #e5e5e5;
   color: #283645;
-  @include opensans(400);
+  font-family:$opensans;
   font-size: 18px;
   line-height: 30px;
   outline: none;
@@ -227,7 +227,7 @@
   padding-right: 30px;
   margin-bottom: 56px;
   text-align: center;
-  @include opensans(400);
+  font-family:$opensans;
   color: $accent;
   font-size: 14px;
   line-height: 18px;
@@ -367,7 +367,10 @@
       background-size:70%;
       border-color: $accent;
       @media (#{$tablet}) {
-        background-position: 9px 12px;
+        background-position: 7px 5px;
+      }
+      @media (#{$desktop}){
+        background-position: 6px 6px;
       }
     }
   }

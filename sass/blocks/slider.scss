@@ -50,6 +50,8 @@
     width: 23px;
     height: 43px;
     top: 213px; right: 10px;
+    cursor: pointer;
+    opacity: 0.7;
   }
 
   &--left {
@@ -60,5 +62,12 @@
     position: absolute;
     right: 10px;
     background: url(../img/icon-review-arrow-right.svg) no-repeat left top;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+  &:active {
+    opacity: 0.3;
   }
 }

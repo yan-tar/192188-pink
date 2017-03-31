@@ -7,17 +7,18 @@
   @media (#{$tablet}) {
     height: 400px;
     padding-top: 57px;
-    padding-bottom: 54px;
+    padding-bottom: 47px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    align-content: center;
   }
   @media (#{$desktop}) {
     min-height: 404px;
     width: 940px;
     margin-bottom: 35px;
     padding-top: 49px;
-    align-content: center;
+    padding-bottom: 55px;
   }
 }
 
@@ -28,7 +29,7 @@
   @media (#{$tablet}) {
     width: 300px;
     margin-left: auto;
-    margin-right: 0;
+    margin-right: 20px;
   }
   @media (#{$desktop}) {
     width: 301px;
@@ -36,34 +37,44 @@
     padding-top: 4px;
     padding-right: 89px;
     padding-left: 80px;
+    margin-right: 0;
   }
 }
+
 .editpic__tools {
   width: 240px;
   margin: 0 auto;
-  padding-top: 25px;
+  padding-top: 17px;
+  padding-bottom: 63px;
 
   @media (#{$tablet}) {
-    width: 276px;
+    width: 300px;
     margin-right: auto;
-    margin-left: 45px;
+    margin-left: 0;
     padding-top: 0;
+    padding-bottom: 0;
   }
   @media (#{$desktop}) {
     width: 410px;
     padding-right: 60px;
     margin-left: 0;
-    outline: 1px solid green;
   }
 }
 
 .editpic__tools-list {
+  padding-left: 0;
+  display: flex;
+  justify-content: space-around;
+
   @media (#{$tablet}) {
     margin-top: 0;
     margin-bottom: 0;
-    padding-left: 0;
-    display: flex;
+    padding-left: 25px;
     flex-direction: column;
+  }
+
+  @media (#{$desktop}) {
+    padding-left: 0;
   }
 }
 
@@ -71,12 +82,27 @@
   width: 44px;
   height: 44px;
   display: inline-block;
+  vertical-align: baseline;
   list-style-type:none;
+  opacity: 0.7;
+  position: relative;
+
+  @media (#{$tablet}) {
+    display: block;
+    width: 100%;
+  }
 
   &--crop {
     background: url("../img/icon-editor-crop.svg") no-repeat 0 0;
     @media (#{$tablet}) {
       height: 56px;
+      background-size: 25px;
+      background-position: left 7px;
+    }
+    @media (#{$desktop}) {
+      height: 60px;
+      background-size: 50px;
+      background-position: 0 0;
     }
   }
 
@@ -84,36 +110,91 @@
     background: url("../img/icon-editor-fill.svg") no-repeat 0 0;
     @media (#{$tablet}) {
       height: 69px;
+      background-size: 25px;
+      background-position: left 25px;
+    }
+    @media (#{$desktop}) {
+      height: 72px;
+      background-size: 50px;
+      background-position: left 14px;
     }
   }
 
   &--contrast {
     background: url("../img/icon-editor-contrast.svg") no-repeat 0 0;
+    background-position: left 7px;
+
     @media (#{$tablet}) {
       height: 70px;
+      background-size: 17px;
+      background-position: 7px 26px;
+    }
+    @media (#{$desktop}) {
+      background-size: 31px;
+      background-position: 6px 19px;
     }
   }
 
   @media (#{$tablet}) {
     border-bottom: 1px solid #dddfe0;
-    outline: 1px solid green;
   }
   @media (#{$desktop}) {
+    border-bottom: none;
+  }
 
+  &:hover {
+    opacity: 1;
   }
 }
 
-.editpic__range {
+.editpic__tools-item--crop.editpic__tools-item--active {
+  background-image: url("../img/icon-editor-crop-active.svg");
+  opacity: 1;
+}
+
+.editpic__tools-item--color.editpic__tools-item--active {
+  background-image: url("../img/icon-editor-fill-active.svg");
+  opacity: 1;
+}
+
+.editpic__tools-item--contrast.editpic__tools-item--active {
+  background-image: url("../img/icon-editor-contrast-active.svg");
+  opacity: 1;
+}
+
+.editpic__tools-item .editpic__range {
+  display:none;
   width: 240px;
   height: 10px;
   margin: 0 auto 36px;
   padding-top: 3px;
   border-bottom:2px solid black;
-  position: relative;
+
+  position: absolute;
+  top: 70px; left: -20px;
+  opacity: 1;
+
+  @media (#{$tablet}) {
+    display: block;
+    width: 202px;
+    margin-left: 56px;
+    margin-top: 5px;
+
+    position: relative;
+    top: 0; left: 0;
+    opacity: 1;
+  }
+
+  @media (#{$desktop}) {
+    width: 288px;
+    margin-top: 10px;
+    margin-left: 92px;
+    margin-right: 20px;
+  }
 
   &::after {
     position: absolute;
-    top: 7px; left: 192px;
+    top: 7px; left: 98px;
     content: "";
     border: 2px solid $accent;
     border-radius: 50%;
@@ -123,22 +204,22 @@
   }
 }
 
-.editpic__tools-item .editpic__range {
-  display:none;
-
+.editpic__tools-item:not(:first-child) .editpic__range {
   @media (#{$tablet}) {
-    display: block;
-    width: 202px;
-    margin-left: 56px;
+    margin-top: 21px;
+  }
+  @media (#{$desktop}) {
+    margin-top: 21px;
   }
 }
 
-.editpic__tools > .editpic__range {
-  @media (#{$tablet}) {
-    display: none;
-  }
+.editpic__tools-item--active .editpic__range {
+  display: block;
 }
 
+.editpic__tools-item--active .editpic__range:after {
+  background-color: $accent;
+}
 
 .editpic__btns {
   padding-top: 26px;
@@ -147,7 +228,7 @@
 
   @media (#{$tablet}) {
     width: 300px;
-    margin-left: 45px;
+    margin-left: 0;
     padding-top: 54px;
     padding-bottom: 0;
     border-top: none;
@@ -159,7 +240,6 @@
 
     display: flex;
     justify-content: flex-start;
-    outline: 1px solid green;
   }
 }
 
@@ -170,14 +250,25 @@
   color: $accent;
 
   @media (#{$tablet}) {
-    width: 261px;
+    width: 251px;
     margin-bottom: 25px;
+    margin-left: 28px;
   }
   @media (#{$desktop}) {
     width: 180px;
     margin-bottom: 0;
     margin-left: 0;
     margin-right: 40px;
+  }
+
+  &:hover {
+    background-color: $accent;
+    color: rgba(255, 255, 255, 1)
+  }
+
+  &:active {
+    background-color: $accent;
+    color: rgba(255, 255, 255, 0.7)
   }
 }
 
@@ -191,5 +282,16 @@
 
   @media (#{$desktop}) {
     margin-right: 0;
+  }
+
+  &:hover {
+    border-color: #b5b9bc;
+    background-color: transparent;
+    color: #ceced0;
+  }
+
+  &:active {
+    background-color: #b6b9be;
+    color: #c8cbd0;
   }
 }

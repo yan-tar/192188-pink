@@ -2,8 +2,60 @@ body {
   min-width:320px;
   margin:0;
   padding:0;
-  @include opensans;
+  font-family:$opensans;
   font-size: 14px;
-  font-weight:normal;
+  font-weight: 400;
   line-height: 30px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.symbols {
+  display:none;
+}
+
+.btn {
+  margin:12px auto;
+  width: 274px;
+  height: 55px;
+  border: 3px solid white;
+  border-radius: 50px;
+
+  font-family:$opensansbold;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 55px;
+  text-align:center;
+
+  cursor: pointer;
+
+  @media (#{$desktop}){
+    font-size: 21px;
+    line-height: 18px;
+  }
+
+  &:hover {
+    background-color: #fff;
+    color: $accent;
+  }
+  &:active {
+    color: rgba($accent, 0.3);
+  }
+}
+
+.visually-hidden{
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
