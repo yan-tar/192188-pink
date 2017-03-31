@@ -108,6 +108,7 @@
 .page-header__logo {
   padding: 22px 0 25px;
   width: 230px;
+  font-size: 0;
 
   @media (#{$tablet}){
     width: 595px;

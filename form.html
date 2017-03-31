@@ -12,7 +12,7 @@
     <div class="page-header__inner">
         <div class="page-header__top">
           <h1 class="page-header__title  visually-hidden">Pink</h1>
-          <div class="page-header__logo"><a title="PINK"></a></div>
+          <div class="page-header__logo"><a title="PINK" href="index.html">Главная</a></div>
           <div class="page-header__toggle"></div>
         </div>
         <nav class="page-header__nav">
@@ -84,5 +84,21 @@
     </ul>
     <div class="page-footer__copyright">Разработано <a href="http://htmlacademy.ru"><svg width="29" height="34"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-htmlacademy"></use></svg></a></div>
   </footer>
+  <script>
+    var pageHeader = document.querySelector('.page-header');
+    var navToggle = document.querySelector('.page-header__toggle');
+
+    pageHeader.classList.remove('page-header--nojs');
+
+    navToggle.addEventListener('click', function() {
+      if (pageHeader.classList.contains('page-header--closed')) {
+        pageHeader.classList.remove('page-header--closed');
+        pageHeader.classList.add('page-header--opened');
+      } else {
+        pageHeader.classList.add('page-header--closed');
+        pageHeader.classList.remove('page-header--opened');
+      }
+    });
+  </script>
 </body>
 </html>

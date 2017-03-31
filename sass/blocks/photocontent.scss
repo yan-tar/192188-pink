@@ -197,12 +197,15 @@
 .photocontent__author {
   margin-top: 0;
   margin-bottom: 0;
+  font-family: $opensansbold;
+  font-weight: 700;
   font-size: 14px;
   line-height: 24px;
 }
 
 .photocontent__time {
   font-size: 12px;
+  font-family: $opensanslight;
   font-weight: 300;
   text-transform: uppercase;
 }

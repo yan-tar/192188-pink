@@ -128,6 +128,8 @@
 
     &::after {
       content: "ХИТ";
+      font-family: $opensansbold;
+      font-weight: 700;
       position: absolute;
       top: 11px; left: 11px;
       transform: rotate(-45deg);

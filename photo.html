@@ -12,7 +12,7 @@
     <div class="page-header__inner">
         <div class="page-header__top">
           <h1 class="page-header__title  visually-hidden">Pink</h1>
-          <div class="page-header__logo"><img src="img/logo-pink-white-mobile.svg" alt="PINK" title="PINK Logo"></div>
+          <div class="page-header__logo"><a title="PINK" href="index.html">Главная</a></div>
           <div class="page-header__toggle"></div>
         </div>
         <nav class="page-header__nav">
@@ -198,10 +198,12 @@
     pageHeader.classList.remove('page-header--nojs');
 
     navToggle.addEventListener('click', function() {
-      if (pageHeader.classList.contains('page-header--opened')) {
-        pageHeader.classList.remove('page-header--opened');
-      } else {
+      if (pageHeader.classList.contains('page-header--closed')) {
+        pageHeader.classList.remove('page-header--closed');
         pageHeader.classList.add('page-header--opened');
+      } else {
+        pageHeader.classList.add('page-header--closed');
+        pageHeader.classList.remove('page-header--opened');
       }
     });
   </script>
