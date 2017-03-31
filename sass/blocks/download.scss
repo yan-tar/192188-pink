@@ -67,9 +67,11 @@
 
   @media (#{$tablet}){
     width: 294px;
+    line-height: 49px;
   }
   @media (#{$desktop}){
     margin-top: 20px;
+    line-height: 49px;
   }
 }
 

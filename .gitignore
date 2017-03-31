@@ -10,3 +10,4 @@ node_modules/
 Thumbs.db
 psd/
 sass/pixelperfect.scss
+build/
