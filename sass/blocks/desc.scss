@@ -46,12 +46,16 @@
 }
 
 .desc__offers {
-  background: url("/img/iphone-screen-mobile@1x.png")
-    no-repeat 50% 110%;
-  background-color: $midlight;
   padding-top: 49px;
   padding-bottom:304px;
   position: relative;
+  background: url("/img/iphone-screen-mobile@1x.png")
+    no-repeat 50% 110%;
+  background-color: $midlight;
+
+  @media (#{$retina1}), (#{$retina2}) {
+    background-image: url("/img/iphone-screen-mobile@2x.png");
+  }
 
   &::before{
     position: absolute;
@@ -63,6 +67,9 @@
     height: 32px;
     background-image: linear-gradient(to top left, #f2f2f2 50%, #ffffff 50%);
 
+    @media (#{$tablet}) {
+      height: 54px;
+    }
     @media (#{$desktop}) {
       height: 95px;
     }
@@ -70,14 +77,35 @@
 
   @media (#{$tablet}) {
     padding-top: 44px;
-    padding-left: 350px;
+    padding-left: 50%;
     padding-bottom: 30px;
-    background-position: 50px bottom;
+    background: none;
+    background-color: #f2f2f2;
+
+    &::after {
+      content:"";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: calc(50% - 44px);
+      height: 100%;
+      margin-right: 44px;
+      z-index: 3;
+      background: url("../img/iphone-screen-3-tablet@1x.png") no-repeat right bottom;
+      @media (#{$retina1}), (#{$retina2}) {
+        background-image: url("../img/iphone-screen-3-tablet@2x.png");
+      }
+    }
   }
 
   @media (#{$desktop}) {
     padding: 0;
     background-image: none;
+    background-color: #f2f2f2;
+
+    &::after {
+      content: none;
+    }
   }
 }
 
@@ -112,10 +140,51 @@
       content: "";
       height: 330px;
       width: 310px;
-      background: url("/img/iphone-screen-mobile@1x.png")
-        no-repeat 50% 120%;
+      background-repeat: no-repeat;
+      background-position: 50% top;
       z-index: 2;
       overflow: hidden;
+    }
+  }
+}
+.desc__offer--gray {
+  @media (#{$desktop}) {
+    &::before {
+      background-image: url("../img/iphone-screen-1-desktop@1x.png");
+    }
+
+    @media (#{$retina1}), (#{$retina2}) {
+      &::before {
+        background-image: url("../img/iphone-screen-1-desktop@2x.png");
+      }
+    }
+  }
+}
+
+.desc__offer--pink {
+  @media (#{$desktop}) {
+    &::before {
+      background-image: url("../img/iphone-screen-2-desktop@1x.png");
+    }
+
+    @media (#{$retina1}), (#{$retina2}) {
+      &::before {
+        background-image: url("../img/iphone-screen-2-desktop@2x.png");
+      }
+    }
+  }
+}
+
+.desc__offer--smile {
+  @media (#{$desktop}) {
+    &::before {
+      background-image: url("../img/iphone-screen-3-desktop@1x.png");
+    }
+
+    @media (#{$retina1}), (#{$retina2}) {
+      &::before {
+        background-image: url("../img/iphone-screen-3-desktop@2x.png");
+      }
     }
   }
 }

@@ -7,6 +7,8 @@
     padding-bottom: 20px;
   }
   @media (#{$desktop}) {
+    width: 960px;
+    margin: 0 auto;
     padding-bottom: 10px;
   }
 }
@@ -23,8 +25,8 @@
   }
 
   @media (#{$desktop}) {
-    padding-top: 125px;
-    padding-bottom: 30px;
+    padding: 125px 0 30px;
+    background: url(../img/icon-quotes.svg) no-repeat 50% 30px;
   }
 }
 
