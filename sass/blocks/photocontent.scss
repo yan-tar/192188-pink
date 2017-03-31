@@ -146,6 +146,9 @@
     margin-left: 0;
     margin-right: 0;
   }
+  @media (#{$desktop}) {
+    margin-bottom: 52px;
+  }
 }
 
 .photocontent__item img {
@@ -258,6 +261,9 @@
     line-height: 30px;
     padding-top: 42px;
     padding-bottom: 70px;
+  }
+  @media (#{$desktop}) {
+    padding-top: 7px;
   }
 }
 

@@ -12,6 +12,13 @@
     flex-direction: column;
     flex-wrap: wrap;
   }
+  @media (#{$desktop}) {
+    min-height: 404px;
+    width: 940px;
+    margin-bottom: 35px;
+    padding-top: 49px;
+    align-content: center;
+  }
 }
 
 .editpic__photo {
@@ -22,6 +29,13 @@
     width: 300px;
     margin-left: auto;
     margin-right: 0;
+  }
+  @media (#{$desktop}) {
+    width: 301px;
+    height: 400px;
+    padding-top: 4px;
+    padding-right: 89px;
+    padding-left: 80px;
   }
 }
 .editpic__tools {
@@ -34,6 +48,12 @@
     margin-right: auto;
     margin-left: 45px;
     padding-top: 0;
+  }
+  @media (#{$desktop}) {
+    width: 410px;
+    padding-right: 60px;
+    margin-left: 0;
+    outline: 1px solid green;
   }
 }
 
@@ -76,6 +96,10 @@
 
   @media (#{$tablet}) {
     border-bottom: 1px solid #dddfe0;
+    outline: 1px solid green;
+  }
+  @media (#{$desktop}) {
+
   }
 }
 
@@ -128,6 +152,15 @@
     padding-bottom: 0;
     border-top: none;
   }
+  @media (#{$desktop}) {
+    width: auto;
+    margin-left: 0;
+    margin-top: auto;
+
+    display: flex;
+    justify-content: flex-start;
+    outline: 1px solid green;
+  }
 }
 
 .editpic__btn {
@@ -140,6 +173,12 @@
     width: 261px;
     margin-bottom: 25px;
   }
+  @media (#{$desktop}) {
+    width: 180px;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 40px;
+  }
 }
 
 .editpic__btn--faden {
@@ -148,5 +187,9 @@
 
   @media (#{$tablet}) {
     margin-bottom: 0;
+  }
+
+  @media (#{$desktop}) {
+    margin-right: 0;
   }
 }
