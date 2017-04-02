@@ -49,3 +49,58 @@ $retina2: "min-resolution: 144dpi";
 $opensanslight: OpenSansLight, Arial, sans-serif;
 $opensans: OpenSans, Arial, sans-serif;
 $opensansbold: OpenSansBold, Arial, sans-serif;
+
+/* body::after {
+  content: "";
+  width: 100%;
+  position:absolute;
+  top:0; left:0;
+  background: url(/psd/preview/pink-form-mobile.jpg) no-repeat 50% 0;
+  height:100%;
+  min-height: 4250px;
+  opacity: 0.4;
+  z-index: 20;
+
+  @media (#{$tablet}){
+    background:
+      url(/psd/preview/pink-form-tablet.jpg)
+      no-repeat 50% 0;
+  }
+
+  @media (#{$desktop}){
+    background:
+      url(/psd/preview/pink-form-desktop.jpg)
+      no-repeat 50% 0;
+
+  }
+} */
+
+body.photo_page::after {
+  background: url(/psd/preview/pink-photo-mobile.jpg) no-repeat 50% 0;
+  @media (#{$tablet}){
+    background:
+      url(/psd/preview/pink-photo-tablet.jpg)
+      no-repeat 50% 0;
+  }
+  @media (#{$desktop}){
+    background:
+      url(/psd/preview/pink-photo-desktop.jpg)
+      no-repeat 50% 0;
+
+  }
+}
+
+body.main_page::after {
+  background: url(/psd/preview/pink-index-mobile.jpg) no-repeat 50% 0;
+  @media (#{$tablet}){
+    background:
+      url(/psd/preview/pink-index-tablet.jpg)
+      no-repeat 50% 0;
+  }
+  @media (#{$desktop}){
+    background:
+      url(/psd/preview/pink-index-desktop.jpg)
+      no-repeat 50% 0;
+
+  }
+}

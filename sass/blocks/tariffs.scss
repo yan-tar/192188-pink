@@ -27,21 +27,34 @@
   }
 }
 
-.tariffs__table {
-  min-height:280px;
+.tariffs__inner {
   width: 260%;
-  border-collapse: collapse;
-  border-spacing: 0;
   position: absolute;
   left:-80%; top:86px;
+
+  @media (#{$tablet}) {
+    width: auto;
+    position: relative;
+    padding-top: 86px;
+    left: 0; top: 0;
+
+  }
+  @media (#{$desktop}) {
+    width: 940px;
+  }
+}
+
+.tariffs__table {
+  min-height:280px;
+  width: 840px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  border-spacing: 0;
   background-color: $midlight;
 
   @media (#{$tablet}) {
     width: 620px;
-    min-height: 218px;
-    position: relative;
-    padding-top: 86px;
-    left: 0;
+    min-height: 218px;    left: 0;
     margin: 0 auto;
   }
   @media (#{$desktop}) {
@@ -52,6 +65,7 @@
 }
 
 .tariffs__cell {
+  width: 278px;
   margin:1px 0;
   padding: 15px;
   padding-left: 20px;
@@ -126,13 +140,34 @@
     background:$middark url(../img/bg-hit.svg) no-repeat 0 0;
     position: relative;
 
+
     &::after {
+      position: absolute;
+      top: 11px; left: 10px;
       content: "ХИТ";
+
+      font-size: 14px;
+      line-height: 22px;
       font-family: $opensansbold;
       font-weight: 700;
-      position: absolute;
-      top: 11px; left: 11px;
+
       transform: rotate(-45deg);
+      z-index: 10;
+      background-color: $accent;
+
+      @media (#{$tablet}) {
+        top: 10px; left: 9px;
+      }
+      @media (#{$desktop}) {
+        top: 11px; left: 12px;
+      }
+    }
+
+    @media (#{$tablet}) {
+      background-size: 40%;
+    }
+    @media (#{$desktop}) {
+      background-size: auto;
     }
   }
 
