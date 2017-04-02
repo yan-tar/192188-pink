@@ -37,7 +37,7 @@
 
   @media (#{$desktop}) {
     width: 768px;
-    padding-bottom: 70px;
+    padding-bottom: 79px;
   }
 }
 
@@ -59,7 +59,8 @@
   }
   @media (#{$desktop}) {
     width: 437px;
-    margin: 14px 0 0;
+    margin: 0;
+    padding-top: 6px;
     padding-bottom: 0;
   }
 }
@@ -174,19 +175,25 @@
   @media (#{$tablet}) {
     display: flex;
     flex-direction: column;
+    text-align: left;
   }
   @media (#{$desktop}) {
     width: 376px;
   }
 
   &--phone {
+    @media (#{$tablet}) {
+    padding-top: 14px;
+    }
     @media (#{$desktop}) {
+      padding-top: 42px;
       float: left;
     }
   }
   &--email {
     @media (#{$desktop}) {
       float: right;
+      padding-top: 13px;
     }
   }
 }
@@ -196,11 +203,12 @@
     width: 499px;
     height: 63px;
     margin-bottom: 11px;
-    background-color: #e5e5e5;
+    background:#e5e5e5 url(../img/icon-phone.svg) no-repeat 458px 50%;
   }
   @media (#{$desktop}) {
     width: 376px;
-    background:#e5e5e5 url(../img/icon-phone.svg) no-repeat 335px 50%;
+    background-position: 335px 50%;
+    margin-bottom: 9px;
   }
 }
 
@@ -209,97 +217,110 @@
     width: 499px;
     height: 63px;
     margin-bottom: 10px;
-    background-color: #e5e5e5;
+    background:#e5e5e5 url(../img/icon-mail.svg) no-repeat 460px 50%;
   }
   @media (#{$desktop}) {
     width: 376px;
     float: right;
     top: -52px;
-    background:#e5e5e5 url(../img/icon-mail.svg) no-repeat 335px 50%;
+    margin-bottom: 9px;
+    background-position: 335px 50%;
+
   }
 }
 
 .form__legend {
   display: inline-block;
   position: relative;
-  top: 55px;
-  padding-left: 30px;
-  padding-right: 30px;
-  margin-bottom: 56px;
-  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 34px;
+  margin-bottom: 43px;
+
   font-family:$opensans;
+  font-weight: 400;
   color: $accent;
   font-size: 14px;
   line-height: 18px;
+  text-align: center;
   text-transform: uppercase;
 
   @media (#{$tablet}) {
-    top: 0;
+    display: inline-block;
+    top: -16px;
+    background-color: #fff;
   }
 
   &--contacts {
     display:none;
     @media (#{$tablet}) {
-      display: inline;
-      margin-bottom: 35px;
+      margin: 0  auto 5px;
+    }
+    @media (#{$desktop})  {
+      left: -188px;
     }
   }
 
   &--app {
-    top: 52px;
-    margin-bottom: 51px;
+    margin-bottom: 38px;
     @media (#{$tablet}) {
-      top: 0;
-      width: 320px;
-      margin-bottom: 46px;
-      padding-right: 20px;
+      width: 330px;
+      margin: 0 auto 32px;
       padding-left: 20px;
+      padding-right: 20px;
+
+      background-color: #fff;
     }
     @media (#{$desktop}) {
-      top: 0;
-      margin-bottom: 49px;
+      margin-bottom: 34px;
     }
   }
 
   &--emotion {
-    top: 40px;
-    margin-bottom: 52px;
+    margin: 34px auto 16px;
+    text-align: center;
+
     @media (#{$tablet}) {
-      top: 0;
-      margin-bottom: 32px;
+      margin-top: 0;
+      margin-bottom: 21px;
     }
     @media (#{$desktop}) {
-      margin-bottom: 27px;
+      margin-bottom: 17px;
     }
   }
 
   &--achievements {
     @media (#{$tablet}) {
-      display: inline;
-      margin-bottom: 49px;
+      display: inline-block;
+      margin-bottom: 5px;
+      margin-top: 0;
     }
     @media (#{$desktop}) {
-      margin-bottom: 47px;
     }
   }
 }
 
 .form__achievements {
   width: 280px;
-  padding: 42px 20px 0;
+  padding: 0 20px 1px;
+  margin-top: 20px;
   border: none;
   background-color: $midlight;
 
   @media (#{$tablet}) {
     order: 3;
     width: 500px;
+    margin-top: 8px;
     margin-bottom: 57px;
     padding: 0 57px 0;
     border: 2px solid #e5e5e5;
     background-color: #fff;
+
+    text-align: center;
   }
   @media (#{$desktop}) {
     width: 820px;
+    margin-bottom: 54px;
   }
 }
 
@@ -307,7 +328,11 @@
   padding:0;
   margin: 0;
   list-style-type: none;
+  text-align: left;
 
+  @media (#{$tablet}) {
+    margin-top: 25px;
+  }
   @media (#{$desktop}) {
     height: 164px;
     margin-bottom: 10px;
@@ -339,7 +364,7 @@
 .form__checklabel {
   position: relative;
   display: inline-block;
-  padding-left: 67px;
+  padding-left: 69px;
 
   &::before {
     content: "";
@@ -399,37 +424,40 @@
   @media (#{$tablet}) {
     order: 2;
     width: 503px;
-    margin-top: 57px;
+    margin-top: 65px;
     margin-bottom: 57px;
     padding: 0 57px 0;
     border: 2px solid #e5e5e5;
+    text-align: center;
   }
   @media (#{$desktop}) {
     width: 820px;
     @include clearfix();
+    margin-top: 67px;
   }
 }
 
 .form__app {
   width: 280px;
-  margin: 0 auto;
-  padding: 40px 20px 0;
+  margin: 24px auto 0;
+  padding: 4px 20px 1px;
   border: none;
   background-color: $midlight;
   @media (#{$tablet}) {
     order: 1;
     width: 507px;
+    margin-top: 7px;
     padding: 0 54px 15px;
     border: 2px solid #e5e5e5;
     background-color: transparent;
+
+    text-align: center;
   }
 
   @media (#{$desktop}) {
-    width: 330px;
+    width: 430px;
     margin: 0;
-    padding-right: 0;
-    padding-left: 70px;
-    padding-bottom: 0;
+    padding: 0;
   }
 }
 
@@ -437,6 +465,12 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
+
+  text-align: left;
+
+  @media (#{$desktop}) {
+    margin-left: 72px;
+  }
 }
 
 .form__radioitem {
@@ -505,6 +539,7 @@
 
 
 .form__emotion {
+  margin-top: 10px;
   padding-left: 20px;
   padding-right: 20px;
   border: none;
@@ -513,8 +548,10 @@
     order: 4;
     padding-left: 57px;
     padding-right: 57px;
+    padding-bottom: 10px;
     margin-bottom: 41px;
     border: 2px solid $border;
+    text-align: center;
   }
   @media (#{$desktop}) {
     width: 820px;
@@ -523,23 +560,24 @@
 }
 
 .form__textarea {
-  width: 236px;
+  width: 239px;
   height: 170px;
   padding: 14px 18px;
   border: 2px solid $border;
   font-size: 18px;
   line-height: 30px;
   outline: none;
+  text-align: left;
 
   @media (#{$tablet}) {
     width: 461px;
-    height: 155px;
-    padding: 17px;
+    height: 158px;
+    padding: 14px 17px 17px;
     margin: 0 auto 32px;
   }
   @media (#{$desktop}) {
     width: 781px;
-    height: 90px;
+    height: 93px;
     margin-bottom: 25px;
   }
 
@@ -572,10 +610,11 @@
 .form__submit {
   width: 280px;
   height: 63px;
-  margin: 26px 20px 20px;
-  background-color: #2aab6d;
+  margin: 37px 20px 20px;
   border: 2px solid #2aab6d;
+
   color: #fff;
+  background-color: #2aab6d;
   font-family: $opensansbold;
   font-size: 18px;
   line-height: 30px;
@@ -586,6 +625,7 @@
   @media (#{$tablet}) {
     width: 300px;
     margin-left: 0;
+    margin-top: 25px;
   }
 
   &:hover {

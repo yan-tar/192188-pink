@@ -36,8 +36,8 @@
       <div class="form__str"><label class="form__label" for="patronymic">Отчество:</label>
       <input type="text" name="patronymic" id="patronymic" class="form__input  form__input--text" placeholder="Ну и отчество тоже"></div>
     </section>
-    <fieldset class="form__achievements">
-      <legend class="form__legend  form__legend--achievements">Ваши безбашенные достижения в путешествии</legend>
+    <section class="form__achievements">
+      <h3 class="form__legend  form__legend--achievements">Ваши безбашенные достижения в путешествии</h3>
       <ul class="form__checklist">
         <li class="form__checkitem"><input type="checkbox" name="achievement" id="selfie" value="selfie" class="form__checkbox" checked><label for="selfie" class="form__checklabel">Сделал селфи с акулой</label></li>
         <li class="form__checkitem"><input type="checkbox" name="achievement" id="beach" value="beach" class="form__checkbox"><label for="beach" class="form__checklabel">Обгорел на пляже</label></li>
@@ -46,9 +46,9 @@
         <li class="form__checkitem"><input type="checkbox" name="achievement" id="tower" value="tower" class="form__checkbox"><label for="tower" class="form__checklabel">Удержал башню</label></li>
         <li class="form__checkitem"><input type="checkbox" name="achievement" id="hotel" value="hotel" class="form__checkbox"><label for="hotel" class="form__checklabel">Разгромил отель</label></li>
       </ul>
-    </fieldset>
-    <fieldset class="form__contacts">
-      <legend class="form__legend  form__legend--contacts">Контактная информация</legend>
+    </section>
+    <section class="form__contacts">
+      <h3 class="form__legend  form__legend--contacts">Контактная информация</h3>
       <div class="form__str-contacts  form__str-contacts--phone">
         <label class="form__label  form__label--phone" for="phone">Номер телефона</label>
         <div class="form__outer-phone"><input type="tel" name="phone" id="phone" class="form__input  form__input--phone" placeholder="Номер, пожалуйста" required></div>
@@ -57,19 +57,19 @@
         <label class="form__label  form__label--email" for="email">Адрес почты</label>
         <div class="form__outer-email"><input type="email" name="email" id="email" class="form__input  form__input--required  form__input--email" placeholder="Введите почту *"></div>
       </div>
-    </fieldset>
-    <fieldset class="form__app">
-      <legend class="form__legend  form__legend--app">С каким приложением путешествовали?</legend>
+    </section>
+    <section class="form__app">
+      <h3 class="form__legend  form__legend--app">С каким приложением путешествовали?</h3>
       <ul class="form__radiolist">
         <li class="form__radioitem"><input type="radio" name="app" id="ios" value="ios" class="form__radio" checked><label for="ios">Pink для iOS</label></li>
         <li class="form__radioitem"><input type="radio" name="app" id="android" value="android" class="form__radio"><label for="android">Pink на Android</label></li>
         <li class="form__radioitem"><input type="radio" name="app" id="winphone" value="winphone" class="form__radio"><label for="winphone">Windows Phone</label></li>
       </ul>
-    </fieldset>
-    <fieldset class="form__emotion">
-      <legend class="form__legend  form__legend--emotion">Опишите свои эмоции</legend>
+    </section>
+    <section class="form__emotion">
+      <h3 class="form__legend  form__legend--emotion">Опишите свои эмоции</h3>
       <textarea cols="20" rows="10" placeholder="Можно прям в красках, не стесняясь в выражениях" class="form__textarea"></textarea>
-    </fieldset>
+    </section>
     <footer class="form__footer">
       <input class="form__submit" type="submit" name="send" value="Отправить форму">
       <p class="form__notes"><span class="form__notes-required">*</span>&nbsp;&mdash; обязательные <span class="form__notes-wide">для заполнения </span>поля</p>
