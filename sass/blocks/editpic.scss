@@ -93,7 +93,7 @@
   }
 
   &--crop {
-    background: url("../img/icon-editor-crop.svg") no-repeat 0 0;
+    background: url(../img/icon-editor-crop.svg) no-repeat 0 0;
     @media (#{$tablet}) {
       height: 56px;
       background-size: 25px;
@@ -107,7 +107,7 @@
   }
 
   &--color {
-    background: url("../img/icon-editor-fill.svg") no-repeat 0 0;
+    background: url(../img/icon-editor-fill.svg) no-repeat 0 0;
     @media (#{$tablet}) {
       height: 69px;
       background-size: 25px;
@@ -121,7 +121,7 @@
   }
 
   &--contrast {
-    background: url("../img/icon-editor-contrast.svg") no-repeat 0 0;
+    background: url(../img/icon-editor-contrast.svg) no-repeat 0 0;
     background-position: left 7px;
 
     @media (#{$tablet}) {
@@ -148,17 +148,17 @@
 }
 
 .editpic__tools-item--crop.editpic__tools-item--active {
-  background-image: url("../img/icon-editor-crop-active.svg");
+  background-image: url(../img/icon-editor-crop-active.svg);
   opacity: 1;
 }
 
 .editpic__tools-item--color.editpic__tools-item--active {
-  background-image: url("../img/icon-editor-fill-active.svg");
+  background-image: url(../img/icon-editor-fill-active.svg);
   opacity: 1;
 }
 
 .editpic__tools-item--contrast.editpic__tools-item--active {
-  background-image: url("../img/icon-editor-contrast-active.svg");
+  background-image: url(../img/icon-editor-contrast-active.svg);
   opacity: 1;
 }
 

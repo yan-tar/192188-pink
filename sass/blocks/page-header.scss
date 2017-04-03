@@ -188,6 +188,7 @@
   &:active {
     opacity: 0.3;
   }
+  background-size: 25px 24px;
 }
 
 .page-header--opened  .page-header__toggle,
@@ -280,9 +281,9 @@
   border-top: 1px solid #485461;
   list-style-type: none;
   color: white;
-  font-family: "Open Sans";
-  font-size: 18px;
+  font-family: $opensansbold;
   font-weight: 700;
+  font-size: 18px;
   line-height: 40px;
   text-transform: uppercase;
 
@@ -291,7 +292,9 @@
     padding-top: 24px;
     padding-bottom: 24px;
     text-transform: none;
-    font-weight: normal;
+
+    font-family: $opensans;
+    font-weight: 400;
     border: none;
   }
 }
@@ -305,11 +308,19 @@
   text-decoration: none;
   border-bottom: 2px solid transparent;
 
+  font-family: $opensansbold;
+  font-weight: 700;
+
   &:hover {
     color: $accent;
   }
   &:active {
     color: rgba(255, 255, 255, 0.3)
+  }
+
+  @media (#{$desktop}) {
+    font-family: $opensans;
+    font-weight: 400;
   }
 }
 

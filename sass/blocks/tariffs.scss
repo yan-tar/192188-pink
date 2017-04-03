@@ -41,6 +41,8 @@
   }
   @media (#{$desktop}) {
     width: 940px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -60,7 +62,7 @@
   @media (#{$desktop}) {
     width: 940px;
     margin-top: 63px;
-    margin-bottom: 180px;
+    margin-bottom: 93px;
   }
 }
 
