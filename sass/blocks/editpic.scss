@@ -1,4 +1,8 @@
 .editpic {
+  display: block;
+}
+
+.editpic__inner {
   background-color: $midlight;
   padding: 20px 0 0;
   margin: 0 auto;
@@ -21,6 +25,7 @@
     padding-bottom: 55px;
   }
 }
+
 
 .editpic__photo {
   display: block;
@@ -244,10 +249,15 @@
 }
 
 .editpic__btn {
+  display: block;
   height: 49px;
+  padding: 0;
   line-height: 45px;
+  box-sizing: content-box;
   border-color: $accent;
+  background-color: transparent;
   color: $accent;
+  outline: none;
 
   @media (#{$tablet}) {
     width: 251px;
