@@ -85,6 +85,7 @@
 
 .form__label {
   display: inline-block;
+  vertical-align: baseline;
   padding-bottom: 5px;
   padding-left: 22px;
   font-family:$opensans;
@@ -231,6 +232,7 @@
 
 .form__legend {
   display: inline-block;
+  vertical-align: baseline;
   position: relative;
   padding-left: 20px;
   padding-right: 20px;
@@ -364,6 +366,7 @@
 .form__checklabel {
   position: relative;
   display: inline-block;
+  vertical-align: baseline;
   padding-left: 69px;
 
   &::before {
