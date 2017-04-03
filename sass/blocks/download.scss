@@ -106,9 +106,9 @@
   width: 240px;
   margin: 12px auto 14px;
   text-align: center;
-  font-family: "Open Sans";
-  font-size: 14px;
+  font-family: $opensanslight;
   font-weight: 300;
+  font-size: 14px;
   line-height: 24px;
 
   @media (#{$tablet}){
