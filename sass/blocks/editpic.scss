@@ -144,7 +144,7 @@
     border-bottom: 1px solid #dddfe0;
   }
   @media (#{$desktop}) {
-    border-bottom: none;
+    //border-bottom: none;
   }
 
   &:hover {
@@ -206,6 +206,8 @@
     width: 10px;
     height: 10px;
     background-color: $midlight;
+    cursor: pointer;
+
   }
 }
 
@@ -223,6 +225,10 @@
 }
 
 .editpic__tools-item--active .editpic__range:after {
+  background-color: $accent;
+}
+
+.editpic__tools-item .editpic__range:active:after {
   background-color: $accent;
 }
 
@@ -269,6 +275,8 @@
     margin-bottom: 0;
     margin-left: 0;
     margin-right: 40px;
+
+    font-size: 18px;
     line-height: 45px;
   }
 
