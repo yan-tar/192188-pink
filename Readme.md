@@ -2,6 +2,7 @@
 
 * Студент: [Яна Таран](https://up.htmlacademy.ru/adaptive/10/user/192188).
 * Без наставника.
+* [HTML version](http://yantarweb.cz/pink/)
 
 ---
 
