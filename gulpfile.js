@@ -10,7 +10,9 @@ var sourcemaps = require("gulp-sourcemaps");
 var rename = require("gulp-rename");
 var svgmin = require("gulp-svgmin");
 var svgstore = require("gulp-svgstore");
+var gcmq = require('gulp-group-css-media-queries');
 var mqpacker = require("css-mqpacker");
+var sortCSSmq = require('sort-css-media-queries');
 var minify = require("gulp-csso");
 var imagemin = require("gulp-imagemin");
 var run = require("run-sequence");
@@ -25,10 +27,7 @@ gulp.task("style", function() {
     .pipe(postcss([
       autoprefixer({browsers: [
         "last 2 versions"
-      ]}),
-      mqpacker({
-        sort:true
-      })
+      ]})
     ]))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest("build/css"))

@@ -6,12 +6,21 @@
   background: url(../img/iphone-hand-mobile@1x.png)
     no-repeat 0 108px;
 
+  @media (#{$retina1}), (#{$retina2}) {
+    background-image: url(../img/iphone-hand-mobile@2x.png);
+  }
+
   @media (#{$tablet}){
     width: 320px;
     height: 547px;
     padding: 71px 320px 0 0;
     background: url(../img/iphone-hand-tablet@1x.png)
     no-repeat 50% 74px;
+
+      // @media (#{$retina1}),
+      // (#{$retina2}) {
+      //   background-image: url(../img/iphone-hand-tablet@2x.png);
+      // }
   }
 
   @media (#{$desktop}){
@@ -20,21 +29,16 @@
     padding: 100px 640px 0 0;
     background: url(../img/iphone-hand-desktop@1x.png)
     no-repeat -14% 98px;
+
+      // @media (#{$retina1}),
+      // (#{$retina2}) {
+      //   background-image: url(../img/iphone-hand-desktop@2x.png);
+      // }
   }
 }
 
-@media (#{$retina1}), (#{$retina2}) {
-  .download {
-    background-image: url(../img/iphone-hand-mobile@2x.png);
 
-    @media (#{$tablet}) {
-      background-image: url(../img/iphone-hand-tablet@2x.png);
-    }
-    @media (#{$desktop}) {
-      background-image: url(../img/iphone-hand-desktop@2x.png);
-    }
-  }
-}
+
 
 .download__slogan {
   display:none;

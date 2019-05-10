@@ -11,15 +11,16 @@
     "del": "^2.2.2",
     "gulp": "3.9.1",
     "gulp-csso": "^3.0.0",
+    "gulp-group-css-media-queries": "^1.2.2",
     "gulp-imagemin": "^3.2.0",
     "gulp-plumber": "1.1.0",
     "gulp-postcss": "6.2.0",
+    "gulp-rename": "^1.2.2",
     "gulp-sass": "3.1.0",
     "gulp-sourcemaps": "^2.4.1",
-    "run-sequence": "^1.2.2",
-    "gulp-rename": "^1.2.2",
     "gulp-svgmin": "^1.2.3",
-    "gulp-svgstore": "^6.1.0"
+    "gulp-svgstore": "^6.1.0",
+    "run-sequence": "^1.2.2"
   },
   "scripts": {
     "test": "editorconfig-cli",
@@ -38,5 +39,6 @@
     "node": "6.10"
   },
   "dependencies": {
+    "sort-css-media-queries": "^1.4.3"
   }
 }

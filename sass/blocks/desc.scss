@@ -92,9 +92,9 @@
       margin-right: 44px;
       z-index: 3;
       background: url(../img/iphone-screen-3-tablet@1x.png) no-repeat right bottom;
-      @media (#{$retina1}), (#{$retina2}) {
-        background-image: url(../img/iphone-screen-3-tablet@2x.png);
-      }
+      // @media (#{$retina1}), (#{$retina2}) {
+      //   background-image: url(../img/iphone-screen-3-tablet@2x.png);
+      // }
     }
   }
 
@@ -153,11 +153,11 @@
       background-image: url(../img/iphone-screen-1-desktop@1x.png);
     }
 
-    @media (#{$retina1}), (#{$retina2}) {
-      &::before {
-        background-image: url(../img/iphone-screen-1-desktop@2x.png);
-      }
-    }
+    // @media (#{$retina1}), (#{$retina2}) {
+    //   &::before {
+    //     background-image: url(../img/iphone-screen-1-desktop@2x.png);
+    //   }
+    // }
   }
 }
 
@@ -167,11 +167,11 @@
       background-image: url(../img/iphone-screen-2-desktop@1x.png);
     }
 
-    @media (#{$retina1}), (#{$retina2}) {
-      &::before {
-        background-image: url(../img/iphone-screen-2-desktop@2x.png);
-      }
-    }
+    // @media (#{$retina1}), (#{$retina2}) {
+    //   &::before {
+    //     background-image: url(../img/iphone-screen-2-desktop@2x.png);
+    //   }
+    // }
   }
 }
 
@@ -181,11 +181,11 @@
       background-image: url(../img/iphone-screen-3-desktop@1x.png);
     }
 
-    @media (#{$retina1}), (#{$retina2}) {
-      &::before {
-        background-image: url(../img/iphone-screen-3-desktop@2x.png);
-      }
-    }
+    // @media (#{$retina1}), (#{$retina2}) {
+    //   &::before {
+    //     background-image: url(../img/iphone-screen-3-desktop@2x.png);
+    //   }
+    // }
   }
 }
 
